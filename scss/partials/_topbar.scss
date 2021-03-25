@@ -1,0 +1,9 @@
+#topbar {
+    background: var(--primary);
+    color: var(--white);
+    border-bottom: 0;
+
+    .top-menu a {
+        color: var(--white) !important;
+    }
+}
