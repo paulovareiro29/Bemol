@@ -1,10 +1,190 @@
-#topbar {
+.topbar {
   background: var(--primary);
   color: var(--white);
-  border-bottom: 0;
 }
-#topbar .top-menu a {
-  color: var(--white) !important;
+.topbar__container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0px 11.111vw;
+}
+@media (max-width: 480px) {
+  .topbar__container {
+    min-height: 24px;
+  }
+}
+.topbar__title {
+  display: flex;
+  align-items: center;
+}
+.topbar__title h1 {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0625em;
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .topbar__title {
+    display: none;
+  }
+}
+.topbar__socials {
+  display: flex;
+}
+.topbar__socials li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+}
+@media (max-width: 480px) {
+  .topbar__socials {
+    display: none;
+  }
+}
+.topbar__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topbar__contacts__item {
+  display: flex;
+  align-items: center;
+}
+.topbar__contacts__item:not(:first-child) {
+  margin-left: 24px;
+}
+.topbar__contacts__item img {
+  margin-right: 8px;
+}
+.topbar__contacts__item span {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+@media (max-width: 1080px) {
+  .topbar__contacts {
+    flex-direction: column;
+  }
+  .topbar__contacts__item:not(:first-child) {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .topbar__contacts {
+    flex-direction: row;
+  }
+  .topbar__contacts__item:not(:first-child) {
+    margin-left: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .topbar__contacts {
+    width: 100%;
+  }
+}
+
+.header {
+  overflow: hidden;
+}
+.header button {
+  border: 0;
+  background: none;
+}
+.header__main {
+  padding: 32px 0px;
+}
+@media (max-width: 480px) {
+  .header__main {
+    padding: 28px 0px;
+  }
+}
+.header__main__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__main__menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__main__menu {
+    display: block;
+  }
+}
+.header__main__menu img {
+  width: 32px;
+}
+@media (max-width: 480px) {
+  .header__main__menu img {
+    width: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .header__main__logo img {
+    height: 24px;
+  }
+}
+.header__main__search {
+  position: relative;
+  width: 100%;
+  margin: 0px 48px;
+}
+@media (max-width: 768px) {
+  .header__main__search {
+    display: none;
+  }
+}
+.header__main__search input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--primary);
+  font-weight: normal;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  padding: 16px 0px !important;
+}
+.header__main__search__icon {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.header__main__buttons {
+  display: flex;
+}
+.header__main__buttons__button img {
+  width: 32px;
+}
+@media (max-width: 480px) {
+  .header__main__buttons__button img {
+    width: 24px;
+  }
+}
+.header__main__buttons__button:not(:first-child) {
+  margin-left: 24px;
+}
+@media (max-width: 480px) {
+  .header__main__buttons__button:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .header__main__buttons__button--heart, .header__main__buttons__button--user {
+    display: none;
+  }
+}
+.header__main__buttons__button--search {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__main__buttons__button--search {
+    display: block;
+  }
 }
 
 :root {
@@ -25,7 +205,32 @@
 
 body {
   font-size: var(--fz-md);
+}
+body * {
   font-family: "Barlow", sans-serif;
+}
+body ul {
+  list-style: outside none none;
+  margin: 0;
+}
+
+.wic-container {
+  padding: 0px 11.111vw;
+}
+@media (max-width: 1440px) {
+  .wic-container {
+    padding: 0px 160px;
+  }
+}
+@media (max-width: 1080px) {
+  .wic-container {
+    padding: 0px 80px;
+  }
+}
+@media (max-width: 768px) {
+  .wic-container {
+    padding: 0px 32px;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

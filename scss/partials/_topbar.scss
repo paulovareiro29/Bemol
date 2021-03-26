@@ -1,9 +1,107 @@
-#topbar {
+@import './breakpoints';
+
+.topbar {
     background: var(--primary);
     color: var(--white);
-    border-bottom: 0;
 
-    .top-menu a {
-        color: var(--white) !important;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        min-height: 40px;
+
+        padding: 0px 11.111vw;
+
+        @include phone {
+            min-height: 24px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            color: var(--white);
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+
+            letter-spacing: 0.0625em;
+            margin: 0;
+            text-align: center;
+        }
+
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__socials {
+        display: flex;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 40px;
+        }
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__item {
+            display: flex;
+            align-items: center;
+
+            &:not(:first-child) {
+                margin-left: 24px;
+            }
+
+            img {
+                margin-right: 8px;
+            }
+
+            span {
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 20px;
+
+                white-space: nowrap;
+            }
+        }
+
+        @include laptop {
+            flex-direction: column;
+
+            &__item {
+
+                &:not(:first-child) {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        @include tablet {
+            flex-direction: row;
+            &__item {
+
+                &:not(:first-child) {
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        @include phone {
+            width: 100%;
+        }
     }
 }

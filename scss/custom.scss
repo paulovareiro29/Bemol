@@ -1,23 +1,51 @@
 @use 'partials/topbar';
+@use 'partials/header';
 
+@import './partials/breakpoints';
 
 :root {
-    --primary: #21B2A6;
-    --primary-secondary: #dbeef0;
-    --secondary: #2e3842;
-    --text-primary: #334243;
-    --text-secondary: #5d7071;
-    --text-tertiary: #7d8c8d;
-    --white: #ffffff;
-    --danger: #bf403e;
-    --fz-xs: 12px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 20px;
-    --fz-xl: 24px;
-  }
-  
-  body {
-    font-size: var(--fz-md);
+  --primary: #21B2A6;
+  --primary-secondary: #dbeef0;
+  --secondary: #2e3842;
+  --text-primary: #334243;
+  --text-secondary: #5d7071;
+  --text-tertiary: #7d8c8d;
+  --white: #ffffff;
+  --danger: #bf403e;
+  --fz-xs: 12px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 20px;
+  --fz-xl: 24px;
+}
+
+body {
+  font-size: var(--fz-md);
+
+
+  * {
     font-family: "Barlow", sans-serif;
   }
+
+  ul {
+    list-style: outside none none ;
+    margin: 0;
+  }
+}
+
+
+.wic-container {
+  padding: 0px 11.111vw;
+
+  @include desktop {
+    padding: 0px 160px;
+  }
+
+  @include laptop {
+    padding: 0px 80px;
+  }
+
+  @include tablet {
+    padding: 0px 32px;
+  }
+}
