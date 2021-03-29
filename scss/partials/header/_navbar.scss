@@ -1,13 +1,8 @@
-@import './breakpoints';
+@import '../breakpoints';
 
 .header {
 
     background: var(--white);
-
-    button {
-        border: 0;
-        background: none;
-    }
 
     &__search-bar {
         position: relative;
@@ -36,6 +31,8 @@
 
     &__main {
         padding: 32px 0px;
+
+        border-bottom: 1px solid #ECEEEE;
 
         @include phone {
             padding: 28px 0px;
@@ -138,7 +135,7 @@
             >ul {
                 display: flex;
 
-                padding: 20px 0px;
+                height: 64px;
 
                 li,
                 a {

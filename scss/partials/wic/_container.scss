@@ -1,0 +1,18 @@
+@import '../breakpoints';
+
+.wic-container {
+  width: 100%;
+  padding: 0px 11.111vw;
+
+  @include desktop {
+    padding: 0px 160px;
+  }
+
+  @include laptop {
+    padding: 0px 80px;
+  }
+
+  @include tablet {
+    padding: 0px 32px;
+  }
+}

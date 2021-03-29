@@ -1,0 +1,138 @@
+@import '../breakpoints';
+
+
+.section--hero {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: column-reverse;
+    }
+
+    .hero {
+
+        &__container {
+            position: relative;
+
+            height: 480px;
+
+            @include tablet {
+                height: 320px;
+            }
+
+
+            &__background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                height: 100%;
+
+                z-index: -1;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translate(-50%, -50%);
+                    min-width: 100%;
+                    min-height: 100%;
+
+                    @include tablet {
+
+                        content: url('../../../images/hero_mobile.png');
+                    }
+                }
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+
+                @include tablet {
+                    justify-content: flex-end;
+                }
+
+                >h3 {
+                    font-weight: bold;
+                    font-size: 32px;
+                    line-height: 40px;
+                    color: var(--white);
+
+                    max-width: 418px;
+
+                    @include tablet {
+                        font-size: 28px;
+                        line-height: 36px;
+
+                        
+                    }
+                }
+
+                >h1 {
+                    font-weight: 900;
+                    font-size: 80px;
+                    line-height: 96px;
+                    color: var(--white);
+
+                    @include tablet {
+                        font-size: 36px;
+                        line-height: 44px;
+                    }
+                }
+
+                >button {
+                    margin-top: 40px;
+
+                    max-width: 256px;
+                    height: 48px;
+
+                    font-weight: bold;
+                    font-size: var(--fz-md);
+                    line-height: 24px;
+
+                    letter-spacing: 0.0625em;
+
+                    @include tablet {
+                        max-width: 202px;
+                        padding: 4px;
+                        height: 32px;
+
+                        margin-top: 32px;
+                        margin-bottom: 40px;
+
+                        letter-spacing: 0.0625em;
+                    }
+
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        
+                        
+
+                        height: 24px;
+
+
+                    }
+
+                    img {
+                        width: 16px;
+                        margin-left: 8px;
+
+                        @include tablet {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

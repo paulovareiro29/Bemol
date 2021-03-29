@@ -1,0 +1,73 @@
+@import '../breakpoints';
+
+
+.wic-division {
+    position: relative;
+
+    background: var(--primary-secondary);
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+
+
+    @include tablet {
+        height: 32px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+
+        &__item {
+            display: flex;
+            align-items: center;
+
+            font-weight: bold;
+            font-size: var(--fz-md);
+            line-height: 24px;
+
+            letter-spacing: 0.0625em;
+
+            color: var(--primary);
+
+            @include tablet {
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0em;
+            }
+
+            >img {
+                margin-right: 8px;
+                width: 24px;
+
+                @include tablet {
+                    width: 20px;
+                }
+            }
+
+            @include tablet {
+
+                &--portes,
+                &--pagamento {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        
+        right: 16px;
+
+        >img {
+            @include tablet {
+                width: 16px;
+            }
+        }
+
+    }
+}
