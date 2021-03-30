@@ -1,6 +1,7 @@
 @use './partials/wic/wic';
 @use './partials/section/sections';
 @use 'partials/header/header';
+@use 'partials/product';
 
 @import './partials/breakpoints';
 
@@ -12,8 +13,10 @@
   --text-secondary: #5d7071;
   --text-tertiary: #7d8c8d;
   --background-secondary: #ECEEEE;
+  --background-tertiary: #DEE1E2;
   --white: #ffffff;
   --danger: #bf403e;
+  --neutral: #171C21;
   --fz-xs: 12px;
   --fz-sm: 14px;
   --fz-md: 16px;
