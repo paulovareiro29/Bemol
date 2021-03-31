@@ -1,0 +1,28 @@
+@import '../breakpoints';
+
+.section--offers{
+    &__container{
+        display: flex;
+        height: 400px; 
+
+        @include tablet {
+            height: 240px;
+
+            >img {
+                &:last-child{
+                    width: auto;
+                }
+            }
+        }
+
+        >img {
+
+            &:first-child{
+                width: auto;
+            }
+            width: 100%;
+
+            object-fit: cover;
+        }
+    }
+}

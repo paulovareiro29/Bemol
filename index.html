@@ -58,9 +58,12 @@
                         <img src="images/icons/logo.svg" alt="">
                     </div>
                     <div class="header__main__search header__search-bar">
-                        <input type="text" placeholder="Pesquisar...">
-                        <img class="header__main__search__icon header__search-bar__icon" src="images/icons/search.svg"
-                            alt="">
+                        <form action="" method="GET">
+                            <input type="text" placeholder="Pesquisar...">
+                            <button type="submit" class="header__main__search__icon header__search-bar__icon"><img
+                                    src="images/icons/search.svg" alt=""></button>
+                        </form>
+
                     </div>
                     <ul class="header__main__buttons">
                         <li class="header__main__buttons__button header__main__buttons__button--search"><button><img
@@ -94,9 +97,11 @@
                 <div class="header__navbar__menu wic-container">
                     <div class="header__navbar__menu__wrapper">
                         <div class="header__navbar__menu__search header__search-bar">
-                            <input type="text" placeholder="Pesquisar...">
-                            <img class="header__navbar__menu__search__icon header__search-bar__icon"
-                                src="images/icons/search.svg" alt="">
+                            <form action="" method="GET">
+                                <input type="text" placeholder="Pesquisar...">
+                                <button type="submit" class="header__navbar__menu__search__icon header__search-bar__icon"><img
+                                        src="images/icons/search.svg" alt=""></button>
+                            </form>
                         </div>
                         <ul class="header__navbar__menu__container">
 
@@ -381,47 +386,49 @@
 
             </div>
 
-            <div class="section--products__mobile carousel" data-items="3" data-dots="false">
-                <div class="section--products__item">
-                    <img src="images/icons/products/cleaning.svg" alt="">
-                    <span>HIGIENE<br> E LIMPEZA</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/package.svg" alt="">
-                    <span>EMBALAGEM</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/bag.svg" alt="">
-                    <span>SACOS/<br>SAQUETAS</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/paper.svg" alt="">
-                    <span>PAPÉIS</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/pastry.svg" alt="">
-                    <span>DECORAÇÃO/<br>PASTELARIA</span>
-                </div>
+            <div class="section--products__mobile">
+                <div class="carousel small" data-items="3" data-dots="false" data-items-sm="3" data-items-xs="3">
+                    <div class="section--products__item">
+                        <img src="images/icons/products/cleaning.svg" alt="">
+                        <span>HIGIENE<br> E LIMPEZA</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/package.svg" alt="">
+                        <span>EMBALAGEM</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/bag.svg" alt="">
+                        <span>SACOS/<br>SAQUETAS</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/paper.svg" alt="">
+                        <span>PAPÉIS</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/pastry.svg" alt="">
+                        <span>DECORAÇÃO/<br>PASTELARIA</span>
+                    </div>
 
-                <div class="section--products__item">
-                    <img src="images/icons/products/identification.svg" alt="">
-                    <span>IDENTIFICAÇÃO</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/uniform.svg" alt="">
-                    <span>FARMANENTO<br>E PROTEÇÃO</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/disposal.svg" alt="">
-                    <span>DESCARTÁVEIS</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/other.svg" alt="">
-                    <span>OUTROS</span>
-                </div>
-                <div class="section--products__item">
-                    <img src="images/icons/products/office.svg" alt="">
-                    <span>ESCRITÓRIO</span>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/identification.svg" alt="">
+                        <span>IDENTIFICAÇÃO</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/uniform.svg" alt="">
+                        <span>FARMANENTO<br>E PROTEÇÃO</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/disposal.svg" alt="">
+                        <span>DESCARTÁVEIS</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/other.svg" alt="">
+                        <span>OUTROS</span>
+                    </div>
+                    <div class="section--products__item">
+                        <img src="images/icons/products/office.svg" alt="">
+                        <span>ESCRITÓRIO</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -720,8 +727,121 @@
 
         </section>
 
+        <section class="section section--offers">
+            <div class="wic-container">
+                <div class="section__title">
+                    <h1>MELHORES OFERTAS</h1>
+                </div>
+            </div>
 
-        
+            <div class="section--offers__container">
+                <img src="images/offer1.png" alt="">
+                <img src="images/offer2.png" alt="">
+            </div>
+
+        </section>
+
+        <section class="section section--team">
+            <div class="section--team__container wic-container">
+                <div class="section__title">
+                    <h1>EQUIPA</h1>
+                </div>
+                <div class="section--team__carousel carousel" data-items="4" data-dots="false">
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/alexandre.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">ALEANDRE VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/filipa.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">FILIPA VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/carina.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">CARINA VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/jose.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">JOSE VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/alexandre.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">ALEXANDRE VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/filipa.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">FILIPA VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/carina.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">CARINA VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member__photo">
+                            <img src="images/team/jose.png" alt="">
+                        </div>
+                        <div class="team-member__info">
+                            <h3 class="team-member__info__name">JOSE VIEIRA</h3>
+                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="wic-division">
+            <ul class="wic-division__container wic-container">
+                <li class="wic-division__container__item wic-division__container__item--portes">
+                    <img src="images/icons/division/van.svg" alt="">
+                    <span>PORTES GRÁTIS</span>
+                </li>
+                <li class="wic-division__container__item wic-division__container__item--trocas">
+                    <img src="images/icons/division/return.svg" alt="">
+                    <span>TROCAS E DEVOLUÇÕES</span>
+                </li>
+                <li class="wic-division__container__item wic-division__container__item--pagamento">
+                    <img src="images/icons/division/secure.svg" alt="">
+                    <span>PAGAMENTO SEGURO</span>
+                </li>
+            </ul>
+            <button class="wic-division__close"><img src="images/icons/close.svg" alt=""></button>
+        </div>
+
     </main>
 
     <!-- GREEN OVERLAY -->

@@ -2,6 +2,11 @@
 
 .section--products {
 
+    @include tablet {
+        padding: 40px 0px 0px 0px !important;
+    }
+   
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -36,12 +41,16 @@
     }
 
     &__mobile {
-        padding: 0px 50px;
+        padding: 0px 32px;
         display: none;
+
 
         @include tablet {
             display: block;
         }
+
+        
+    
     }
 
     &__desktop {

@@ -1,7 +1,8 @@
 @use './partials/wic/wic';
 @use './partials/section/sections';
-@use 'partials/header/header';
-@use 'partials/product';
+@use './partials/header/header';
+@use './partials/product';
+@use './partials/team-member';
 
 @import './partials/breakpoints';
 

@@ -1,0 +1,17 @@
+@import '../breakpoints';
+
+.section--team{
+    padding-bottom: 120px !important;
+
+    @include tablet {
+        padding-bottom: 40px !important;
+    }
+
+    &__carousel{
+        margin-top: 64px;
+
+        @include tablet {
+            margin-top: 40px;
+        }
+    }
+}

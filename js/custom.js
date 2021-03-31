@@ -1,3 +1,20 @@
+//  HEADER MOBILE SEARCH BUTTON
+$(".header__main__buttons__button--search").click((e) => {
+
+  //  OPEN MENU
+  $(".header__navbar__menu").animate(
+    {
+      height: "show",
+    },
+    $("window").css("--transition-time")
+  );
+  $(".wic-overlay").addClass("wic-overlay--active");
+
+  //  FOCUS ON INPUT 
+  $(".header__navbar__menu__search input").focus();
+})
+
+
 //  HEADER Toggle Menu
 $(".header__navbar__menu").animate(
   {
@@ -59,9 +76,6 @@ let dropDowns = $(".header__navbar__menu__dropdown__toggle").click((e) => {
 
 
 
-
-
-//  Products
 
 
 
