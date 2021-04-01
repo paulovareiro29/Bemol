@@ -412,6 +412,65 @@
   color: var(--text-secondary);
 }
 
+.footer-content {
+  background: var(--white);
+  border-top: 1px solid #21B2A6;
+  padding: 79px;
+  margin-top: 57px;
+}
+.footer-content .widget .widget-title {
+  font-weight: 700;
+  font-style: normal;
+  line-height: 28px;
+  color: #21b2a6;
+}
+.footer-content .widget .list a {
+  color: #5d7071;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.copyright-content {
+  border-top: 1px solid #DEE1E2;
+  padding: 20px;
+}
+
+.newsletter {
+  display: contents;
+  align-items: center;
+}
+.newsletter label {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 256px;
+  margin-top: 56px;
+}
+.newsletter #email {
+  border: 1px solid #DEE1E2;
+  min-width: 448px;
+  min-height: 48px;
+  margin-left: 66px;
+}
+.newsletter .submeter {
+  background: #2E3842;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.0625em;
+  text-align: center;
+  margin-left: 32px;
+  min-width: 160px;
+  min-height: 48px;
+  border-radius: none;
+}
+
 :root {
   --primary: #21B2A6;
   --primary-secondary: #dbeef0;
