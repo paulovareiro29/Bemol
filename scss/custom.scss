@@ -3,6 +3,7 @@
 @use './partials/header/header';
 @use './partials/product';
 @use './partials/team-member';
+@use './partials/footer/footer';
 
 @import './partials/breakpoints';
 
@@ -70,9 +71,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-radius: 999px;
+  
   &--primary {
     background: var(--primary);
+    color: var(--white);
+    padding: 12px;
+  }
+
+  &--secondary{
+    background: var(--secondary);
     color: var(--white);
     padding: 12px;
   }

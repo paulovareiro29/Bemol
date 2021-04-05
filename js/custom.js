@@ -1,6 +1,5 @@
 //  HEADER MOBILE SEARCH BUTTON
 $(".header__main__buttons__button--search").click((e) => {
-
   //  OPEN MENU
   $(".header__navbar__menu").animate(
     {
@@ -10,10 +9,9 @@ $(".header__main__buttons__button--search").click((e) => {
   );
   $(".wic-overlay").addClass("wic-overlay--active");
 
-  //  FOCUS ON INPUT 
+  //  FOCUS ON INPUT
   $(".header__navbar__menu__search input").focus();
-})
-
+});
 
 //  HEADER Toggle Menu
 $(".header__navbar__menu").animate(
@@ -74,8 +72,29 @@ let dropDowns = $(".header__navbar__menu__dropdown__toggle").click((e) => {
 
 
 
+//  FOOTER
+$(".footer__content__links .widget .widget-title").click((e) => {
+  if ($(window).width() < 768) {
+    $(e.target).next().animate({
+      height: "toggle",
+    });
+  }
+});
 
-
-
-
-
+$(window).bind("breakpoint-change", (breakpoint) => {
+  if ($(window).width() < 768) {
+    $(".footer__content__links .widget .widget-list").animate(
+      {
+        height: "hide",
+      },
+      0
+    );
+  } else {
+    $(".footer__content__links .widget .widget-list").animate(
+      {
+        height: "show",
+      },
+      0
+    );
+  }
+});
