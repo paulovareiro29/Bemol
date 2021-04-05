@@ -1,0 +1,59 @@
+@import '../breakpoints';
+
+.popover {
+    padding: 32px;
+    max-width: none;
+
+    &-header {
+        padding: 0px 0px 32px 0px;
+    }
+
+    &-body {
+        padding: 32px 0px 0px 0px;
+    }
+
+    .navbar-popover {
+
+        &__title {
+            font-weight: bold;
+            font-size: var(-fz-md);
+            line-height: 24px;
+            color: var(--secondary);
+
+
+            img {
+                margin-right: 16px;
+            }
+        }
+
+        &__user-signup {
+            width: 352px;
+
+            p {
+                margin-bottom: 16px !important;
+
+                font-weight: normal;
+                font-size: var(-fz-md);
+                line-height: 24px;
+
+                color: var(--text-primary);
+            }
+
+            button {
+                padding: 8px 0px;
+                width: 100%;
+
+                font-weight: bold;
+                font-size: var(-fz-md);
+                line-height: 24px;
+
+                text-align: center;
+                letter-spacing: 0.0625em;
+
+                &:first-of-type {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}

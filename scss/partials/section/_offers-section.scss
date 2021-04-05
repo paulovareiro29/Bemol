@@ -1,6 +1,11 @@
 @import '../breakpoints';
 
 .section--offers{
+
+    @include tablet {
+        padding: 40px 0px 0px 0px !important;
+    }
+
     &__container{
         display: flex;
         height: 400px; 

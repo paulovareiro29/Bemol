@@ -84,4 +84,11 @@ body {
     color: var(--white);
     padding: 12px;
   }
+
+  &--outline-secondary{
+    background: var(--white);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 12px;
+  }
 }

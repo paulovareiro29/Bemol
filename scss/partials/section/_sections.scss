@@ -1,4 +1,3 @@
-
 @use './hero-section';
 @use './products-section';
 @use './highlights-section';
@@ -10,12 +9,17 @@
 .section {
     padding: 80px 0px 40px 0px;
 
+
+    @include tablet {
+        padding: 40px 0px 40px 0px;
+    }
+
     &__title {
 
         padding: 0px 0px 32px 0px;
         border-bottom: 1px solid var(--background-tertiary);
         margin-bottom: 32px;
-         
+
         @include tablet {
             padding: 0px 0px 24px 0px;
         }
@@ -31,23 +35,24 @@
 
             @include tablet {
                 font-size: var(--fz-lg);
+                line-height: 32px;
             }
         }
 
-       
+
     }
 
     .carousel:hover,
     .carousel {
         .flickity-button {
 
-            &.previous{
+            &.previous {
                 left: -72px;
 
                 @include laptop {
                     left: -56px !important;
                 }
-                
+
                 @include tablet {
                     left: 0px !important;
                 }
@@ -64,7 +69,7 @@
                     right: 0px !important;
                 }
             }
-            
+
         }
     }
 
@@ -73,11 +78,11 @@
     .carousel.small {
         .flickity-button {
 
-            &.previous{
+            &.previous {
                 @include laptop {
                     left: -32px !important;
                 }
-                
+
                 @include tablet {
                     left: -32px !important;
                 }
@@ -88,7 +93,7 @@
                     right: -32px !important;
                 }
             }
-            
+
         }
     }
 
@@ -97,7 +102,7 @@
         box-shadow: none;
 
         &.previous {
-            
+
             &::before {
                 content: url('../../../images/icons/carousel/40_arrow_left.svg');
 
@@ -120,9 +125,8 @@
 
     }
 
-    .polo-carousel-item{
+    .polo-carousel-item {
         display: flex;
         justify-content: center;
     }
 }
-

@@ -1,3 +1,5 @@
+import("./modules/popovers.js");
+
 //  HEADER MOBILE SEARCH BUTTON
 $(".header__main__buttons__button--search").click((e) => {
   //  OPEN MENU
@@ -70,8 +72,6 @@ let dropDowns = $(".header__navbar__menu__dropdown__toggle").click((e) => {
     );
 });
 
-
-
 //  FOOTER
 $(".footer__content__links .widget .widget-title").click((e) => {
   if ($(window).width() < 768) {
@@ -98,3 +98,19 @@ $(window).bind("breakpoint-change", (breakpoint) => {
     );
   }
 });
+
+//  POPOVER TEMPLATE
+$(".navbar-popover-trigger").popover({
+  placement: "bottom",
+  offset: "0 , 37",
+  html: true,
+  sanitize: false,
+  title: "BLANK",
+  content: "BLANK",
+  template: `
+        <div class="popover navbar-popover" role="tooltip">
+          <div class="popover-header navbar-popover__title"></div>
+          <div class="popover-body navbar-popover__body"></div>
+        </div>`,
+});
+
