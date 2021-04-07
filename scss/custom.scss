@@ -14,10 +14,13 @@
   --text-primary: #334243;
   --text-secondary: #5d7071;
   --text-tertiary: #7d8c8d;
+  --background-primary: #F9F9F9;
   --background-secondary: #ECEEEE;
   --background-tertiary: #DEE1E2;
   --white: #ffffff;
   --danger: #bf403e;
+  --success: #84D4A6;
+  --caution: #DBD597;
   --neutral: #171C21;
   --fz-xs: 12px;
   --fz-sm: 14px;
@@ -85,10 +88,19 @@ body {
     padding: 12px;
   }
 
+  &--outline-primary{
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 12px;
+  }
+
   &--outline-secondary{
     background: var(--white);
     color: var(--secondary);
     border: 1px solid var(--secondary);
     padding: 12px;
   }
+
+  
 }

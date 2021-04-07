@@ -1,0 +1,151 @@
+@import '../../breakpoints';
+
+.navbar-popover {
+    &__body {
+        padding-top: 0 !important;
+    }
+
+    &--favorites {
+        &__product {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            padding: 16px 0px;
+
+            &__image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 64px;
+                height: 64px;
+
+                border-radius: 50%;
+                background: var(--background-primary);
+
+                >img {
+                    width: 56px;
+                    height: 56px;
+
+                    mix-blend-mode: multiply;
+                }
+            }
+
+            &__info {
+                padding-right: 28px;
+                flex: 1;
+                margin-left: 16px;
+
+                &__brand {
+                    font-weight: normal;
+                    font-size: var(--fz-xs);
+                    line-height: 20px;
+
+                    color: var(--text-secondary);
+                }
+
+                &__name {
+                    display: flex;
+
+                    
+
+                    font-weight: bold;
+                    font-size: var(--fz-md);
+                    line-height: 24px;
+
+                    color: var(--text-primary);
+
+                }
+
+                &__available {
+                    position: absolute;
+                    top: 40px;
+                    right: 12px;
+
+                    width: 16px;
+                    height: 16px;
+
+                    border-radius: 50%;
+
+
+                    &--unavailable {
+                        background: var(--danger);
+                    }
+
+                    &--available {
+                        background: var(--success);
+                    }
+                }
+
+                &__ref {
+                    font-weight: normal;
+                    font-size: var(--fz-xs);
+                    line-height: 20px;
+
+                    color: var(--text-primary);
+                }
+
+                &__price {
+                    margin-top: 8px;
+
+                    font-weight: bold;
+                    font-size: var(--fz-md);
+                    line-height: 24px;
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .button {
+            margin-top: 32px;
+
+            height: 40px;
+
+            padding: 8px 0px;
+        }
+
+        &-empty {
+
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 80px 0px;
+
+                >img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                >h1 {
+                    font-weight: bold;
+                    font-size: var(--fz-lg);
+                    line-height: 28px;
+
+                    color: var(--secondary);
+
+                    margin-top: 16px;
+                }
+
+                >p {
+                    font-weight: normal;
+                    font-size: var(--fz-md);
+                    line-height: 24px;
+
+                    text-align: center;
+
+                    color: var(--text-tertiary);
+
+                    margin-top: 4px;
+                }
+            }
+
+
+
+            .button {
+                margin-top: 0px;
+            }
+        }
+    }
+}

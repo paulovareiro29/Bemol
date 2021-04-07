@@ -1,0 +1,55 @@
+@use './popover-user';
+@use './popover-favorites';
+@use './popover-cart';
+
+
+@import '../../breakpoints';
+
+.popover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    padding: 32px;
+    max-width: none;
+
+    width: 352px;
+
+    @include tablet {
+        display: none;
+    }
+
+    &-header {
+        padding: 0px 0px 32px 0px;
+    }
+
+    &-body {
+        padding: 32px 0px 0px 0px;
+    }
+
+    .navbar-popover {
+
+
+        &__title {
+            font-weight: bold;
+            font-size: var(-fz-md);
+            line-height: 24px;
+            color: var(--secondary);
+
+
+            img {
+                margin-right: 16px;
+            }
+        }
+
+        
+    }
+
+    .button {
+        font-weight: bold;
+        font-size: var(--fz-md);
+        line-height: 24px;
+
+        text-align: center;
+        letter-spacing: 0.0625em;
+        width: 100%;
+    }
+}

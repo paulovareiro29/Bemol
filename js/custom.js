@@ -1,4 +1,11 @@
+let loggedIn = true;
+let favoriteProducts = [];
+let cartProducts = [];
+
+
 import("./modules/popovers.js");
+
+
 
 //  HEADER MOBILE SEARCH BUTTON
 $(".header__main__buttons__button--search").click((e) => {
@@ -113,4 +120,5 @@ $(".navbar-popover-trigger").popover({
           <div class="popover-body navbar-popover__body"></div>
         </div>`,
 });
+
 

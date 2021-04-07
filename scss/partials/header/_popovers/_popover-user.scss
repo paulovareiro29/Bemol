@@ -1,0 +1,72 @@
+@import '../../breakpoints';
+
+.navbar-popover {
+
+    &--user {
+
+        &-loggedin {
+            ul {
+
+
+                li {
+                    padding: 16px 0px;
+
+                    &:not(:first-child) {
+                        border-top: 1px solid var(--background-tertiary);
+                    }
+
+                    a {
+                        font-size: var(--fz-md);
+                        line-height: 24px;
+                        color: var(--text-primary);
+                    }
+                }
+            }
+
+            .button {
+                font-size: var(--fz-md);
+                line-height: 24px;
+
+                text-align: center;
+                letter-spacing: 0.0625em;
+
+                margin-top: 28px;
+                width: 100%;
+                height: 40px;
+            }
+        }
+
+
+        &-signup {
+
+
+            p {
+                margin-bottom: 16px !important;
+
+                font-weight: normal;
+                font-size: var(-fz-md);
+                line-height: 24px;
+
+                color: var(--text-primary);
+            }
+
+            button {
+                padding: 8px 0px;
+                width: 100%;
+
+                font-weight: bold;
+                font-size: var(-fz-md);
+                line-height: 24px;
+
+                text-align: center;
+                letter-spacing: 0.0625em;
+
+                &:first-of-type {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+
+}
