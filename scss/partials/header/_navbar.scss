@@ -361,7 +361,7 @@
                         }
 
                         a {
-                            color: var(--primary);
+                            color: var(--secondary);
                             font-weight: normal;
                             font-size: var(--fz-md);
                             line-height: 24px;
@@ -374,7 +374,7 @@
                             &:hover,
                             &:focus,
                             &:active {
-                                color: var(--secondary) !important;
+                                color: var(--primary) !important;
                             }
                         }
 

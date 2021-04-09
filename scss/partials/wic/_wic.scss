@@ -1,3 +1,37 @@
 @use './container';
 @use './overlay';
 @use './division';
+
+@import '../breakpoints';
+
+.wic-desktop {
+    @include tablet {
+        display: none;
+    }
+}
+
+.wic-laptop {
+    display: none;
+
+    @include laptop {
+        display: block;
+    }
+}
+
+.wic-tablet {
+    display: none;
+
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.wic-phone {
+    display: none;
+
+
+    @include phone {
+        display: block;
+    }
+}

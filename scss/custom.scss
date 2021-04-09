@@ -1,5 +1,4 @@
 @use './partials/wic/wic';
-@use './partials/section/sections';
 @use './partials/header/header';
 @use './partials/product';
 @use './partials/team-member';
@@ -8,7 +7,7 @@
 @import './partials/breakpoints';
 
 :root {
-  --primary: #21B2A6;
+  --primary: #21b2a6;
   --primary-secondary: #dbeef0;
   --secondary: #2e3842;
   --text-primary: #334243;
@@ -56,6 +55,26 @@ body {
     background: none;
   }
 
+  a:hover {
+    color: var(--primary) !important;
+
+    &.button {
+
+      &--primary,
+      &--secondary {
+        color: var(--white) !important;
+      }
+
+      &--outline-primary {
+        color: var(--primary);
+      }
+
+      &--outline-secondary {
+        color: var(--secondary);
+      }
+    }
+  }
+
   h1,
   h2,
   h3,
@@ -75,32 +94,46 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  
+
   &--primary {
     background: var(--primary);
     color: var(--white);
     padding: 12px;
+
   }
 
-  &--secondary{
+  &--secondary {
     background: var(--secondary);
     color: var(--white);
     padding: 12px;
   }
 
-  &--outline-primary{
+  &--outline-primary {
     background: var(--white);
     color: var(--primary);
     border: 1px solid var(--primary);
     padding: 12px;
   }
 
-  &--outline-secondary{
+  &--outline-secondary {
     background: var(--white);
     color: var(--secondary);
     border: 1px solid var(--secondary);
     padding: 12px;
   }
 
-  
+
+}
+
+
+.modal-backdrop {
+  min-width: 320px;
+  background-color: #DBEEF0;
+  mix-blend-mode: multiply;
+
+  height: 100%;
+
+  &.show {
+    opacity: 1;
+  }
 }

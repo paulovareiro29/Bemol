@@ -1,0 +1,110 @@
+@import '../breakpoints';
+
+
+.shop-filter {
+    max-width: 256px;
+
+    padding: 0;
+    overflow: hidden;
+
+    @include tablet {
+        max-width: none;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    &__menu {
+
+        &__title {
+            cursor: pointer;
+            position: relative;
+            padding: 18px 0px;
+
+            border-bottom: 1px solid var(--background-tertiary);
+
+            >h5 {
+                font-weight: bold;
+                font-size: var(--fz-lg);
+                line-height: 28px;
+
+                color: var(--primary);
+
+                text-transform: uppercase;
+
+                
+            }
+
+
+            >img {
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                width: 32px;
+            }
+        }
+
+        &__content {
+            overflow: hidden;
+
+            >ul {
+                padding: 32px 0px 40px 0px;
+
+                >li {
+
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__submenu {
+        overflow: hidden;
+
+        &__title {
+            font-weight: bold;
+            font-size: var(--fz-md);
+            line-height: 24px;
+
+            color: var(--text-primary);
+
+            cursor: pointer;
+        }
+
+        &__content {
+
+            >ul {
+
+                padding: 24px 0px 0px 16px;
+
+                >li {
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+
+                    >label {
+                        font-weight: normal;
+                        font-size: var(--fz-md);
+                        line-height: 24px;
+
+                        color: var(--text-primary);
+                        flex: 1;
+                    }
+
+                    >input[type=checkbox] {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,58 @@
-let loggedIn = true;
-let favoriteProducts = [];
-let cartProducts = [];
+let client = {
+  id: 117,
+  name: "Alexandre Vieira",
+  loggedIn: true,
+  cartProducts: [],
+  favoriteProducts: []
+}
+let shopProducts = [];
+
+/** TESTING PURPOSES */
+images = ["../../images/product.png"];
+available = ["unavailable", "available", "partial"];
+
+trueOrFalse = [true, false];
+
+function random(array) {
+  let random = (Math.random() * (array.length - 1)).toFixed(0);
+  return array[random];
+}
+
+//  SHOP ITEMS
+for (let i = 0; i < 12; i++) {
+  let product = {
+    image: random(images),
+    ref: 123450 + i,
+    type: "Embal",
+    name: "Forma de alumínio <br> 80 x 50",
+    price: "35,00",
+    available: random(available),
+    recyclable: random(trueOrFalse),
+    discount: (Math.random() * 100).toFixed(0),
+    favorite: random(trueOrFalse),
+  }
+
+
+  shopProducts.push(product);
+}
+
+//  CART/FAVORITES ITEMS
+for (let i = 0; i < 5; i++) {
+
+  shopProducts[i].favorite = true;
+
+  client.cartProducts.push({
+    product: shopProducts[i],
+    quantity: (Math.random() * 20 + 1).toFixed(0)
+  })
+
+  client.favoriteProducts.push(shopProducts[i])
+
+}
+//  END TEST
 
 
 import("./modules/popovers.js");
-
 
 
 //  HEADER MOBILE SEARCH BUTTON
@@ -79,6 +127,22 @@ let dropDowns = $(".header__navbar__menu__dropdown__toggle").click((e) => {
     );
 });
 
+//  POPOVER TEMPLATE
+$(".navbar-popover-trigger").popover({
+  trigger: "click",
+  placement: "bottom",
+  offset: "0 , 37",
+  html: true,
+  sanitize: false,
+  title: "BLANK",
+  content: "BLANK",
+  template: `
+        <div class="popover navbar-popover" role="tooltip">
+          <div class="popover-header navbar-popover__title"></div>
+          <div class="popover-body navbar-popover__body"></div>
+        </div>`,
+});
+
 //  FOOTER
 $(".footer__content__links .widget .widget-title").click((e) => {
   if ($(window).width() < 768) {
@@ -106,19 +170,8 @@ $(window).bind("breakpoint-change", (breakpoint) => {
   }
 });
 
-//  POPOVER TEMPLATE
-$(".navbar-popover-trigger").popover({
-  placement: "bottom",
-  offset: "0 , 37",
-  html: true,
-  sanitize: false,
-  title: "BLANK",
-  content: "BLANK",
-  template: `
-        <div class="popover navbar-popover" role="tooltip">
-          <div class="popover-header navbar-popover__title"></div>
-          <div class="popover-body navbar-popover__body"></div>
-        </div>`,
+//  WIC
+//    DIVISION
+$(".wic-division__close").click((e) => {
+  $(e.target).parents(".wic-division").remove();
 });
-
-

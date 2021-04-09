@@ -75,6 +75,10 @@
                     &--available {
                         background: var(--success);
                     }
+
+                    &--partial {
+                        background: var(--warning);
+                    }
                 }
 
                 &__ref {

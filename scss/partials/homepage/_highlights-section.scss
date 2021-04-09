@@ -1,0 +1,84 @@
+@import '../breakpoints';
+
+
+.section--highlights {
+
+    @include tablet {
+        padding: 80px 0px 40px 0px !important;
+    }
+
+    .section__title h1::after {
+        content: 'PRODUTOS EM DESTAQUE';
+
+        @include tablet {
+            content: 'EM DESTAQUE';
+        }
+    }
+
+
+    &__mobile {
+        display: none;
+        align-items: center;
+        flex-direction: column;
+
+
+        @include tablet {
+            display: flex;
+        }
+
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+
+            .highlight_item {
+                flex: 1 1 50%;
+                display: flex;
+                justify-content: center;
+                padding: 0;
+
+                margin-bottom: 32px;
+
+                
+            }
+        }
+
+        .product_item {
+            flex: 1 1 calc(50% - 16px);
+            margin: 8px;
+            margin-bottom: 32px;
+
+            @include phone {
+                &__image{
+                    width: 130px;
+                }
+            }
+        }
+
+        &__see-more {
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.0625em;
+            padding: 0;
+            min-height: 32px !important;
+            max-height: 32px !important;
+        }
+    }
+
+    &__desktop {
+        display: block;
+
+        @include tablet {
+            display: none;
+        }
+
+        .highlight_item{
+            &.col-6 {
+                flex: none;
+                max-width: none;      
+            }
+        }
+    }
+}

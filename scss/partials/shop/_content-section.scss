@@ -1,0 +1,200 @@
+@import '../breakpoints';
+
+
+.section--content {
+    padding-top: 56px !important;
+    padding-bottom: 120px !important;
+
+    .row {
+        margin: 0;
+    }
+
+    &__options {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        margin-bottom: 58px;
+
+
+        @include tablet {
+            align-items: center;
+        }
+
+        &__filter-name {
+            display: flex;
+            justify-content: flex-end;
+
+            @include tablet {
+                justify-content: flex-start;
+            }
+
+            >h4 {
+                font-weight: bold;
+                font-size: var(--fz-xl);
+                line-height: 32px;
+
+                text-align: center;
+
+                color: var(--primary);
+
+                @include phone {
+
+                    font-size: var(--fz-lg);
+                    line-height: 28px;
+
+                }
+            }
+        }
+
+
+        >.col,
+        >.col-3 {
+            padding: 0;
+        }
+
+        form {
+            max-width: 256px;
+        }
+
+        select {
+
+            font-weight: normal;
+            font-size: var(--fz-md);
+            line-height: 24px;
+
+            color: var(--text-primary);
+
+            cursor: pointer;
+
+            border: 1px solid var(--background-tertiary);
+            border-radius: 0;
+
+            background-image: url(../../../images/icons/arrow_down.svg) !important;
+            background-position: calc(100% - 8px) center !important;
+
+
+            &:focus {
+                border-color: var(--primary);
+
+                box-shadow: 0 0 0 0.2rem rgb(33 178 166 / 25%);
+            }
+        }
+
+        &__itemperpage {
+            margin-left: 82px;
+
+            >h6 {
+                font-weight: normal;
+                font-size: var(--fz-xs);
+                line-height: 20px;
+
+                color: var(--text-tertiary);
+
+                margin-bottom: 8px !important;
+            }
+        }
+
+        &__order {
+            margin-left: 32px;
+
+            h6 {
+                font-weight: normal;
+                font-size: var(--fz-xs);
+                line-height: 20px;
+
+                color: var(--text-tertiary);
+
+                margin-bottom: 8px !important;
+            }
+        }
+
+        >button {
+            width: 40px;
+            height: 40px;
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+            border: 1px solid var(--background-tertiary);
+
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+
+
+            @include tablet {
+                display: flex;
+            }
+        }
+    }
+
+    &__sidebar {
+        margin-right: 32px;
+
+        @include tablet {
+            display: none;
+        }
+
+
+    }
+
+    &__shop {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        &__grid {
+            width: 100%;
+
+            .grid-item {
+                display: flex;
+                justify-content: center;
+
+                padding: 0 !important;
+
+                padding: 0px 16px 62px !important;
+
+                @include tablet {
+                    padding: 0px 16px 32px !important;
+
+                }
+
+                .product_item {
+                    width: 100% !important;
+
+                }
+            }
+        }
+
+
+        &__pagination {
+            .page-item {
+                .page-link {
+                    font-weight: bold;
+                    font-size: var(--fz-md);
+                    line-height: 24px;
+
+                    text-align: center;
+                    letter-spacing: 0.0625em;
+
+                    color: var(--secondary);
+
+                    padding: 0;
+                    width: 24px;
+                    height: 24px;
+                }
+
+                &.active {
+                    .page-link{
+                        background-color: var(--primary) !important;
+                        color: var(--white) !important;
+                    }
+                }
+            }
+        }
+    }
+}

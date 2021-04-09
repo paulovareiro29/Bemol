@@ -1,22 +1,7 @@
-//  TEST PURPOSES
 
-for (let i = 0; i < 5; i++) {
-  let product = {
-    image: "../../images/UHU.png",
-    brand: "UHU",
-    name: "Cola Universal Líquida",
-    ref: 124350 + i, // ref is unique
-    price: 70.0,
-    available: false,
-  };
+let favoriteProducts = client.favoriteProducts
+let cartProducts = client.cartProducts
 
-  cartProducts.push({
-    product: product,
-    quantity: 3,
-  });
-
-  favoriteProducts.push(product);
-}
 
 //  HEADER popover template
 function user() {
@@ -25,7 +10,7 @@ function user() {
     content: "",
   };
 
-  if (loggedIn) {
+  if (client.loggedIn) {
     popover.content = `
     <div class="navbar-popover--user-loggedin">
       <ul>
@@ -42,10 +27,10 @@ function user() {
     popover.content = `
       <div class="navbar-popover--user-signup">
         <p>Entrar na minha conta</p>
-        <button type="button" class="button button--primary">INICIAR SESSÃO</button>
+        <a href="/login"  class="button button--primary">INICIAR SESSÃO</a>
 
         <p>Registar-me</p>
-        <button type="button" class="button button--outline-secondary">CRIAR CONTA</button>
+        <a href="/register" class="button button--outline-secondary">CRIAR CONTA</a>
       </div>   
       `;
   }
@@ -59,7 +44,7 @@ function favorites() {
     content: "",
   };
 
-  if (favoriteProducts.length && loggedIn) {
+  if (favoriteProducts.length && client.loggedIn) {
     //  Product object to HTML
     let productsHTML = "";
     favoriteProducts.forEach((product, k) => {
@@ -72,25 +57,17 @@ function favorites() {
     </div>
     
     <div class="navbar-popover--favorites__product__info">
-      <p class="navbar-popover--favorites__product__info__brand">${
-        product.brand
-      }</p>
+      <p class="navbar-popover--favorites__product__info__brand">${product.type}</p>
 
-      <h6 class="navbar-popover--favorites__product__info__name">${
-        product.name
-      }</h6>
+      <a href="/product?ref=${product.ref}" class="navbar-popover--favorites__product__info__name">${product.name}</a>
       <span 
       class="navbar-popover--favorites__product__info__available 
-      navbar-popover--favorites__product__info__available--${
-        product.available ? "available" : "unavailable"
-      }">
+      navbar-popover--favorites__product__info__available--${product.available}">
       </span> 
-      <p class="navbar-popover--favorites__product__info__ref">Ref. ${
-        product.ref
-      }</p>
+      <p class="navbar-popover--favorites__product__info__ref">Ref. ${product.ref}</p>
       <h6 class="navbar-popover--favorites__product__info__price">
       € 
-${product.price.toFixed(2)}
+${product.price}
       </h6>
     </div>
   </div>
@@ -100,7 +77,7 @@ ${product.price.toFixed(2)}
     popover.content = `
       <div class="navbar-popover--favorites">
         ${productsHTML}
-        <button type="button" class="button button--primary">VER TODOS</button>
+        <a href="/favorites"  class="button button--primary">VER TODOS</a>
       </div>
   `;
   } else {
@@ -112,7 +89,7 @@ ${product.price.toFixed(2)}
           <h1>Não tem favoritos.</h1>
           <p>Inicie sessão na sua conta Bemol para aceder aos artigos que tem no seu carrinho.</p>
         </div>
-        <button type="button" class="button button--primary">INICIAR SESSÃO</button>
+        <a href="/login" class="button button--primary">INICIAR SESSÃO</a>
       
         </div>
   `;
@@ -123,7 +100,7 @@ ${product.price.toFixed(2)}
           <img src="../../images/icons/heart-green--outline.svg" />
           <h1>Não tem favoritos.</h1>
         </div>
-        <button type="button" class="button button--primary">IR PARA A LOJA</button>
+        <a href="/shop" class="button button--primary">IR PARA A LOJA</a>
       
         </div>
   `;
@@ -141,48 +118,34 @@ function cart() {
     content: "",
   };
 
-  if (cartProducts.length && loggedIn) {
+  if (cartProducts.length && client.loggedIn) {
     //  Product object to HTML
     let productsHTML = "";
     cartProducts.forEach((product, k) => {
       if (k >= 2) return;
 
       productsHTML += `
-  <div class="navbar-popover--cart__product" data-cart-item="${
-    product.product.ref
-  }">
+  <div class="navbar-popover--cart__product" data-cart-item="${product.product.ref}">
     <div class="navbar-popover--cart__product__image">
       <img src="${product.product.image}" />
     </div>
     
     <div class="navbar-popover--cart__product__info">
-      <p class="navbar-popover--cart__product__info__brand">${
-        product.product.brand
-      }</p>
+      <p class="navbar-popover--cart__product__info__brand">${product.product.type}</p>
 
-      <h6 class="navbar-popover--cart__product__info__name">${
-        product.product.name
-      }</h6>
+      <a href="/product?ref=${product.product.ref}" class="navbar-popover--cart__product__info__name">${product.product.name}</a>
       <span 
       class="navbar-popover--cart__product__info__available 
-      navbar-popover--cart__product__info__available--${
-        product.product.available ? "available" : "unavailable"
-      }">
+      navbar-popover--cart__product__info__available--${product.product.available}">
       </span> 
 
-      <p class="navbar-popover--cart__product__info__ref">Ref. ${
-        product.product.ref
-      }</p>
-      <h6 class="navbar-popover--cart__product__info__price">€ ${product.product.price.toFixed(
-        2
-      )}</h6>
+      <p class="navbar-popover--cart__product__info__ref">Ref. ${product.product.ref}</p>
+      <h6 class="navbar-popover--cart__product__info__price">€ ${product.product.price}</h6>
 
       <div class="navbar-popover--cart__product__info__counter">
         <button type="button" class="navbar-popover--cart__product__info__counter__fullminus"><img src="../../images/icons/cart/box-minus.svg"/></button>
         <button type="button" class="navbar-popover--cart__product__info__counter__decrement"><img src="../../images/icons/cart/cart-minus.svg"/></button>
-        <span class="navbar-popover--cart__product__info__counter__counter">${
-          product.quantity
-        }</span>
+        <span class="navbar-popover--cart__product__info__counter__counter">${product.quantity}</span>
         <button type="button" class="navbar-popover--cart__product__info__counter__increment" ><img src="../../images/icons/cart/cart-plus.svg"/></button>
         <button type="button" class="navbar-popover--cart__product__info__counter__fullplus"><img src="../../images/icons/cart/box-plus.svg"/></button>
       </div>
@@ -196,12 +159,12 @@ function cart() {
     popover.content = `
       <div class="navbar-popover--cart">
         ${productsHTML}
-        <button type="button" class="button button--primary">VER CARRINHO</button>
+        <a href="cart" class="button button--primary">VER CARRINHO</a>
         <button type="button" class="button button--outline-primary clear-cart-button">LIMPAR CARRINHO</button>
       </div>
   `;
   } else {
-    if (!loggedIn) {
+    if (!client.loggedIn) {
       popover.content = `
       <div class="navbar-popover--cart navbar-popover--cart-empty">
         <div class="navbar-popover--cart-empty__wrapper">
@@ -211,7 +174,7 @@ function cart() {
           para aceder aos seus artigos<br>
           favoritos.</p>
         </div>
-        <button type="button" class="button button--primary">INICIAR SESSÃO</button>
+        <a href="/login"  class="button button--primary">INICIAR SESSÃO</a>
       
         </div>
   `;
@@ -222,7 +185,7 @@ function cart() {
           <img src="../../images/icons/list-green--outline.svg" />
           <h1>O seu carrinho está vazio.</h1>
         </div>
-        <button type="button" class="button button--primary">IR PARA A LOJA</button>
+        <a href="/shop"  class="button button--primary">IR PARA A LOJA</a>
       
         </div>
   `;
@@ -260,7 +223,8 @@ $("#navbar_cart_popover").on("shown.bs.popover", function () {
       .parents(".navbar-popover--cart__product")
       .attr("data-cart-item");
 
-    getItemByRef(item).quantity -= 1;
+    let itemByRef = getItemByRef(item);
+    itemByRef.quantity = parseInt(itemByRef.quantity) - 1;
     updateCounter(item);
   });
 
@@ -269,7 +233,8 @@ $("#navbar_cart_popover").on("shown.bs.popover", function () {
       .parents(".navbar-popover--cart__product")
       .attr("data-cart-item");
 
-    getItemByRef(item).quantity += 1;
+    let itemByRef = getItemByRef(item);
+    itemByRef.quantity = parseInt(itemByRef.quantity) + 1;
     updateCounter(item);
   });
 

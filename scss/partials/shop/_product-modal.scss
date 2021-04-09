@@ -1,0 +1,289 @@
+@import '../breakpoints';
+
+.product-modal {
+    @include tablet {
+        display: none !important;
+    }
+
+    &__dialog {
+        margin-top: 160px;
+
+
+        &__content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+
+            padding: 32px;
+
+            border-radius: 0;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background: var(--white);
+
+            &__image {
+                width: 256px;
+                height: 256px;
+                border-radius: 50%;
+                background: var(--background-primary);
+                overflow: hidden;
+
+                margin-left: 48px;
+                margin-right: 80px;
+
+                @include laptop {
+                    height: 154px;
+                    width: 154px;
+                    margin-left: 0px;
+                    margin-right: 40px;
+                }
+
+                >img {
+                    width: 100%;
+                    height: 100%;
+                    mix-blend-mode: multiply;
+
+                    
+                }
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                flex: 1;
+
+                &__header {
+                    display: flex;
+                    justify-content: space-between;
+
+                    padding-bottom: 24px;
+                    border-bottom: 1px solid var(--background-tertiary);
+
+                    &__brand {
+                        font-weight: normal;
+                        font-size: var(--fz-md);
+                        line-height: 24px;
+
+                        color: var(--text-secondary);
+                    }
+
+                    &__name {
+                        font-weight: bold;
+                        font-size: var(--fz-xl);
+                        line-height: 32px;
+
+                        color: var(--text-primary);
+
+                        flex: 1 1 50%;
+                    }
+
+                    &__price {
+                        flex: 1 1 66%;
+
+                        position: relative;
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+
+                        >* {
+                            &::before {
+                                content: '€ '
+                            }
+                        }
+
+                        &__new {
+                            font-weight: bold;
+                            font-size: var(--fz-xl);
+                            line-height: 32px;
+                            color: var(--primary);
+                        }
+
+                        &__old {
+                            position: absolute;
+                            bottom: 26px;
+
+                            font-weight: normal;
+                            font-size: var(--fz-md);
+                            line-height: 24px;
+
+                            color: var(--text-tertiary);
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                width: 100%;
+                                border-bottom: 1px solid var(--text-tertiary);
+                            }
+                        }
+                    }
+                }
+
+                &__body {
+                    display: flex;
+                    align-items: center;
+
+                    height: 40px;
+
+                    margin: 24px 0px 32px 0px;
+
+                    >:not(:first-child) {
+                        margin-left: 32px;
+                    }
+
+                    &__recyclable {
+                        height: 100%;
+
+                        >img {
+                            height: 100%;
+                        }
+
+                    }
+
+                    &__ref {
+                        font-weight: normal;
+                        font-size: var(--fz-md);
+                        line-height: 24px;
+
+                        color: var(--text-primary);
+
+                        strong {
+                            color: var(--primary);
+                        }
+                    }
+
+                    &__available {
+                        position: relative;
+                        flex: 1;
+
+                        height: 100%;
+
+                        display: flex;
+                        align-items: center;
+
+                        padding-left: 24px;
+
+                        >span {
+                            font-weight: normal;
+                            font-size: var(--fz-md);
+                            line-height: 24px;
+
+                            color: var(--text-primary);
+
+                        }
+
+
+                        &::after {
+                            content: ' ';
+                            border-radius: 50%;
+                            width: 16px;
+                            height: 16px;
+
+                            position: absolute;
+                            left: 0;
+                        }
+
+                        &--available {
+
+                            &::after {
+                                background: var(--success);
+                            }
+
+                        }
+
+                        &--unavailable {
+                            &::after {
+                                background: var(--danger);
+                            }
+
+                        }
+
+                        &--partial {
+                            &::after {
+                                background: var(--warning);
+                            }
+
+                        }
+
+
+                    }
+                }
+
+                &__footer {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    &__quantity {
+                        >span {
+                            font-weight: normal;
+                            font-size: var(--fz-xs);
+                            line-height: 20px;
+
+                            color: var(--text-tertiary);
+                        }
+
+
+                        &__counter {
+                            display: flex;
+                            margin-top: 8px;
+
+                            >* {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                width: 40px;
+                                height: 40px;
+
+                                border: 1px solid var(--background-tertiary);
+
+                                &:not(:last-child) {
+                                    border-right: 0;
+                                }
+                            }
+
+                            &__counter {
+                                font-size: var(--fz-md);
+                                line-height: 24px;
+                                width: 80px;
+                                text-align: center;
+                                color: var(--text-primary);
+                            }
+                        }
+
+                        margin-bottom: 32px;
+                    }
+
+                    >.button {
+                        display: flex;
+                        align-items: center;
+
+                        height: 48px;
+                        width: 100%;
+                        margin-top: auto;
+
+                        font-weight: bold;
+                        font-size: var(--fz-md);
+                        line-height: 24px;
+
+                        text-align: center;
+                        letter-spacing: 0.0625em;
+
+                        color: var(--white);
+
+
+                        >img {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
