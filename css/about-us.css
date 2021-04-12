@@ -1,10 +1,31 @@
-.about-us {
-  max-width: 544px;
-  margin-top: 80px;
-  margin-left: 448px;
-  margin-bottom: 120px;
+.section--image-divider {
+  width: 100%;
+  padding: 0;
 }
-.about-us > h5 {
+.section--image-divider__image {
+  position: relative;
+  height: 240px;
+  width: 100%;
+}
+.section--image-divider__image > img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section--about-us {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.section--about-us__container {
+  display: flex;
+  justify-content: center;
+}
+.section--about-us__content {
+  max-width: 544px;
+}
+.section--about-us__content > h5 {
   font-family: Barlow;
   font-size: 20px;
   font-style: normal;
@@ -14,7 +35,7 @@
   text-align: left;
   color: #21b2a6;
 }
-.about-us > p {
+.section--about-us__content > p {
   margin-top: 32px !important;
   font-family: Barlow;
   font-size: 16px;
