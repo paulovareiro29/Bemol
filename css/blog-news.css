@@ -1,10 +1,31 @@
-.blog-news {
-  max-width: 735px;
-  margin-left: 352px;
-  margin-right: 352px;
-  margin-top: 80px;
+.section--image-divider {
+  width: 100%;
+  padding: 0;
 }
-.blog-news__header__date > span {
+.section--image-divider__image {
+  position: relative;
+  height: 240px;
+  width: 100%;
+}
+.section--image-divider__image > img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section--blog-news {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.section--blog-news__container {
+  display: flex;
+  justify-content: center;
+}
+.section--blog-news__wrapper {
+  width: 735px;
+}
+.section--blog-news__header__date > span {
   font-family: Barlow;
   font-size: 16px;
   font-style: normal;
@@ -14,19 +35,30 @@
   text-align: left;
   color: #7D8C8D;
 }
-.blog-news__header__socials {
+.section--blog-news__header__socials {
   margin: auto;
   margin-right: 0px;
 }
-.blog-news__header__socials > img {
+@media (max-width: 768px) {
+  .section--blog-news__header__socials {
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+}
+.section--blog-news__header__socials > img {
   margin-right: 27px;
 }
-.blog-news__header__title {
+.section--blog-news__header__title {
   display: flex;
   border-bottom: 1px solid #DEE1E2;
   padding-bottom: 32px;
 }
-.blog-news__header__title > h3 {
+@media (max-width: 768px) {
+  .section--blog-news__header__title {
+    flex-direction: column;
+  }
+}
+.section--blog-news__header__title > h3 {
   font-family: Barlow;
   font-size: 32px;
   font-style: normal;
@@ -36,7 +68,7 @@
   text-align: left;
   color: #21b2a6;
 }
-.blog-news__content > p {
+.section--blog-news__content > p {
   margin-top: 32px !important;
   font-family: Barlow;
   font-size: 16px;
@@ -46,7 +78,7 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.blog-news__content > h6 {
+.section--blog-news__content > h6 {
   margin-top: 32px !important;
   font-family: Barlow;
   font-size: 16px;
@@ -57,15 +89,11 @@
   text-align: left;
   color: #21b2a6;
 }
-.blog-news__content > :first-child {
+.section--blog-news__content > :first-child {
   font-weight: bold;
 }
-.blog-news__content > :last-child {
+.section--blog-news__content > :last-child {
   color: #21b2a6;
-}
-
-.wic-division {
-  margin-top: 120px;
 }
 
 /*# sourceMappingURL=blog-news.css.map */
