@@ -1,0 +1,165 @@
+@import './partials/breakpoints';
+
+.section {
+
+    &--image-divider {
+        width: 100%;
+        padding: 0;
+        height: fit-content;
+
+
+
+        &__image {
+            height: 80px;
+            width: 100%;
+
+            >img {
+                position: absolute;
+                min-width: 100%;
+                min-height: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        >.wic-division {
+            display: none;
+
+            @include tablet {
+                display: flex;
+            }
+        }
+
+    }
+
+
+    &--register-form {
+
+        @include tablet {
+            padding-bottom: 120px;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        &__wrapper {
+            width: 736px;
+
+            @include tablet {
+                width: 311px;
+            }
+        }
+
+
+
+        .register-form {
+
+            &--newclient,
+            &--wronginfo,
+            &--success {
+                display: none;
+            }
+
+
+
+            &__checkbox {
+                margin-left: calc(50% + 16px);
+
+                a {
+                    color: var(--primary);
+                }
+
+                @include tablet {
+                    margin-left: 0;
+                }
+            }
+
+            &__buttons {
+                display: flex;
+                margin-top: 32px;
+
+                @include tablet {
+                    flex-direction: column-reverse;
+                }
+
+                >.button[type="reset"] {
+                    display: none;
+                    margin-right: 32px;
+                    width: 159px;
+
+                    @include tablet {
+                        margin: 0;
+                        width: 100%;
+
+                        margin-top: 16px;
+                    }
+                }
+
+
+            }
+        }
+
+        .button[type="submit"] {
+
+            margin-left: auto;
+
+        }
+
+        &__form {
+            margin-bottom: 172px;
+
+            @include tablet {
+                margin-bottom: 0;
+            }
+
+            &--newclient {
+                .register-form {
+
+                    &--newclient {
+                        display: flex;
+                    }
+                }
+            }
+
+            &--wronginfo {
+                .register-form {
+
+                    &--wronginfo {
+                        display: flex;
+                    }
+
+                    &__buttons {
+                        >.button[type="reset"] {
+                            display: flex;
+
+                        }
+
+                        >.button[type="submit"] {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &--success {
+                .register-form {
+
+                    &--success {
+                        display: flex;
+                    }
+
+                    &__buttons {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

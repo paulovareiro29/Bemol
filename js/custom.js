@@ -3,8 +3,8 @@ let client = {
   name: "Alexandre Vieira",
   loggedIn: true,
   cartProducts: [],
-  favoriteProducts: []
-}
+  favoriteProducts: [],
+};
 let shopProducts = [];
 
 /** TESTING PURPOSES */
@@ -33,31 +33,26 @@ for (let i = 0; i < 12; i++) {
     description: `Indicada para praticamente todo o tipo de materiais, a cola universal líquida da UHU®
     garante uma adesão eficaz.
     Capaz de colar em quase todas as superfícies, a cola universal da UHU® é ideal para
-    projectos de trabalhos manuais escolares ou para pequenas reparações em casa.`
-  }
-
+    projectos de trabalhos manuais escolares ou para pequenas reparações em casa.`,
+  };
 
   shopProducts.push(product);
 }
 
 //  CART/FAVORITES ITEMS
 for (let i = 0; i < 5; i++) {
-
   shopProducts[i].favorite = true;
 
   client.cartProducts.push({
     product: shopProducts[i],
-    quantity: (Math.random() * 20 + 1).toFixed(0)
-  })
+    quantity: (Math.random() * 20 + 1).toFixed(0),
+  });
 
-  client.favoriteProducts.push(shopProducts[i])
-
+  client.favoriteProducts.push(shopProducts[i]);
 }
 //  END TEST
 
-
 import("./modules/popovers.js");
-
 
 //  HEADER MOBILE SEARCH BUTTON
 $(".header__main__buttons__button--search").click((e) => {
@@ -179,3 +174,8 @@ $(window).bind("breakpoint-change", (breakpoint) => {
 $(".wic-division__close").click((e) => {
   $(e.target).parents(".wic-division").remove();
 });
+
+//  ALERT
+$(".wic-alert__close").click((e) => {
+  $(e.target).parents(".wic-alert").remove();
+})

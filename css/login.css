@@ -1,0 +1,62 @@
+.section--image-divider {
+  width: 100%;
+  padding: 0;
+  height: fit-content;
+}
+.section--image-divider__image {
+  height: 160px;
+  width: 100%;
+}
+.section--image-divider__image > img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .section--image-divider__image {
+    display: none;
+  }
+}
+.section--image-divider > .wic-division {
+  display: none;
+}
+@media (max-width: 768px) {
+  .section--image-divider > .wic-division {
+    display: flex;
+  }
+}
+.section--login-form {
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+.section--login-form__container {
+  display: flex;
+  justify-content: center;
+}
+.section--login-form__wrapper {
+  width: 352px;
+}
+@media (max-width: 768px) {
+  .section--login-form__wrapper {
+    width: 311px;
+  }
+}
+.section--login-form__form {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .section--login-form__form__lostpassword {
+    position: absolute;
+    right: 0;
+    top: -8px;
+  }
+}
+@media (max-width: 768px) {
+  .section--login-form__form__rememberlogin {
+    margin-top: 28px;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

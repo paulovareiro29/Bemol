@@ -1,0 +1,112 @@
+.section--image-divider {
+  width: 100%;
+  padding: 0;
+  height: fit-content;
+}
+.section--image-divider__image {
+  height: 80px;
+  width: 100%;
+}
+.section--image-divider__image > img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .section--image-divider__image {
+    display: none;
+  }
+}
+.section--image-divider > .wic-division {
+  display: none;
+}
+@media (max-width: 768px) {
+  .section--image-divider > .wic-division {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .section--register-form {
+    padding-bottom: 120px;
+  }
+}
+.section--register-form__container {
+  display: flex;
+  justify-content: center;
+}
+.section--register-form__wrapper {
+  width: 736px;
+}
+@media (max-width: 768px) {
+  .section--register-form__wrapper {
+    width: 311px;
+  }
+}
+.section--register-form .register-form--newclient, .section--register-form .register-form--wronginfo, .section--register-form .register-form--success {
+  display: none;
+}
+.section--register-form .register-form__checkbox {
+  margin-left: calc(50% + 16px);
+}
+.section--register-form .register-form__checkbox a {
+  color: var(--primary);
+}
+@media (max-width: 768px) {
+  .section--register-form .register-form__checkbox {
+    margin-left: 0;
+  }
+}
+.section--register-form .register-form__buttons {
+  display: flex;
+  margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .section--register-form .register-form__buttons {
+    flex-direction: column-reverse;
+  }
+}
+.section--register-form .register-form__buttons > .button[type=reset] {
+  display: none;
+  margin-right: 32px;
+  width: 159px;
+}
+@media (max-width: 768px) {
+  .section--register-form .register-form__buttons > .button[type=reset] {
+    margin: 0;
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+.section--register-form .button[type=submit] {
+  margin-left: auto;
+}
+.section--register-form__form {
+  margin-bottom: 172px;
+}
+@media (max-width: 768px) {
+  .section--register-form__form {
+    margin-bottom: 0;
+  }
+}
+.section--register-form__form--newclient .register-form--newclient {
+  display: flex;
+}
+.section--register-form__form--wronginfo .register-form--wronginfo {
+  display: flex;
+}
+.section--register-form__form--wronginfo .register-form__buttons > .button[type=reset] {
+  display: flex;
+}
+.section--register-form__form--wronginfo .register-form__buttons > .button[type=submit] {
+  width: 100%;
+}
+.section--register-form__form--success .register-form--success {
+  display: flex;
+}
+.section--register-form__form--success .register-form__buttons {
+  margin-top: 16px;
+}
+
+/*# sourceMappingURL=register.css.map */

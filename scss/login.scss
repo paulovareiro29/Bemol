@@ -1,0 +1,77 @@
+@import './partials/breakpoints';
+
+.section {
+
+    &--image-divider {
+        width: 100%;
+        padding: 0;
+        height: fit-content;
+
+        
+
+        &__image {
+            height: 160px;
+            width: 100%;
+
+            >img {
+                position: absolute;
+                min-width: 100%;
+                min-height: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        >.wic-division {
+            display: none;
+
+            @include tablet {
+                display: flex;
+            }
+        }
+
+    }
+
+    &--login-form {
+        padding-top: 40px;
+
+        padding-bottom: 120px;
+
+        &__container {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__wrapper {
+            width: 352px;
+
+            @include tablet {
+                width: 311px;
+            }
+        }
+
+        &__content {}
+
+        &__form {
+            position: relative;
+
+            &__lostpassword {
+                @include tablet {
+                    position: absolute;
+                    right: 0;
+                    top: -8px;
+                }
+            }
+
+            &__rememberlogin {
+                @include tablet {
+                    margin-top: 28px;
+                }
+            }
+        }
+    }
+}

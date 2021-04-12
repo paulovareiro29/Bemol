@@ -6,6 +6,8 @@
 
 @import './partials/breakpoints';
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --primary: #21b2a6;
   --primary-secondary: #dbeef0;
@@ -17,9 +19,10 @@
   --background-secondary: #ECEEEE;
   --background-tertiary: #DEE1E2;
   --white: #ffffff;
-  --danger: #bf403e;
+  --danger: #CC6D75;
   --success: #84D4A6;
   --caution: #DBD597;
+  --info: #4A8FC0;
   --neutral: #171C21;
   --fz-xs: 12px;
   --fz-sm: 14px;
@@ -99,6 +102,7 @@ body {
     }
   }
 
+  label,
   h1,
   h2,
   h3,
@@ -110,8 +114,6 @@ body {
     letter-spacing: 0em;
   }
 }
-
-
 
 .button {
   display: flex;
@@ -148,7 +150,6 @@ body {
 
 
 }
-
 
 .modal-backdrop {
   min-width: 320px;
@@ -196,6 +197,20 @@ body {
     }
 
 
+  }
+
+  &__small-title {
+
+    margin-bottom: 32px;
+
+    >h4 {
+      font-weight: bold;
+      font-size: var(--fz-xl);
+      line-height: 32px;
+      color: var(--primary);
+
+      text-transform: uppercase;
+    }
   }
 
   .carousel:hover,
@@ -286,3 +301,5 @@ body {
     justify-content: center;
   }
 }
+
+
