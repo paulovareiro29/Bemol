@@ -1,0 +1,93 @@
+.section--image-divider {
+  width: 100%;
+  padding: 0;
+  height: fit-content;
+}
+.section--image-divider__image {
+  height: 240px;
+  width: 100%;
+}
+.section--image-divider__image > img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .section--image-divider__image > img {
+    content: url("../images/recovery_divider_mobile.png");
+  }
+}
+@media (max-width: 768px) {
+  .section--image-divider__image {
+    height: 160px;
+  }
+}
+.section--recovery-form {
+  padding-bottom: 152px;
+}
+.section--recovery-form__container {
+  display: flex;
+  justify-content: center;
+}
+.section--recovery-form__wrapper {
+  width: 356px;
+}
+@media (max-width: 768px) {
+  .section--recovery-form__wrapper {
+    width: 311px;
+  }
+}
+.section--recovery-successful {
+  padding-bottom: 120px;
+}
+.section--recovery-successful__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section--recovery-successful__container > img {
+  width: 160px;
+  height: 160px;
+}
+@media (max-width: 480px) {
+  .section--recovery-successful__container > img {
+    width: 80px;
+    height: 80px;
+  }
+}
+.section--recovery-successful__container > h4 {
+  font-weight: bold;
+  font-size: var(--fz-xl);
+  line-height: 32px;
+  text-align: center;
+  color: var(--secondary);
+  margin-top: 16px !important;
+}
+.section--recovery-successful__container > p {
+  font-weight: normal;
+  font-size: var(--fz-md);
+  line-height: 24px;
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 16px !important;
+}
+.section--recovery-successful__container > .button {
+  margin-top: 40px;
+  width: 352px;
+  height: 40px;
+  font-weight: bold;
+  font-size: var(--fz-md);
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.0625em;
+}
+@media (max-width: 480px) {
+  .section--recovery-successful__container > .button {
+    width: 200px;
+  }
+}
+
+/*# sourceMappingURL=recovery.css.map */
