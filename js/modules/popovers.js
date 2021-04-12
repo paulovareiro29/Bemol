@@ -81,7 +81,7 @@ ${product.price}
       </div>
   `;
   } else {
-    if (!loggedIn) {
+    if (!client.loggedIn) {
       popover.content = `
       <div class="navbar-popover--favorites navbar-popover--favorites-empty">
         <div class="navbar-popover--favorites-empty__wrapper">
@@ -202,7 +202,7 @@ $("#navbar_user_popover").on("show.bs.popover", function () {
 $("#navbar_user_popover").on("shown.bs.popover", function () {
   //  LOGOUT BUTTON
   $(".logout-button").click((e) => {
-    loggedIn = false;
+    client.loggedIn = false;
     $(".navbar-popover").popover("hide");
   });
 });

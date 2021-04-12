@@ -30,6 +30,10 @@ for (let i = 0; i < 12; i++) {
     recyclable: random(trueOrFalse),
     discount: (Math.random() * 100).toFixed(0),
     favorite: random(trueOrFalse),
+    description: `Indicada para praticamente todo o tipo de materiais, a cola universal líquida da UHU®
+    garante uma adesão eficaz.
+    Capaz de colar em quase todas as superfícies, a cola universal da UHU® é ideal para
+    projectos de trabalhos manuais escolares ou para pequenas reparações em casa.`
   }
 
 

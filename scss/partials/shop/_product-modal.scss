@@ -70,13 +70,17 @@
                     }
 
                     &__name {
-                        font-weight: bold;
-                        font-size: var(--fz-xl);
-                        line-height: 32px;
-
-                        color: var(--text-primary);
-
-                        flex: 1 1 50%;
+                        
+                        >a {
+                            font-weight: bold;
+                            font-size: var(--fz-xl);
+                            line-height: 32px;
+    
+                            color: var(--text-primary);
+    
+                        }
+                        
+                        flex: 1 1 100%;
                     }
 
                     &__price {

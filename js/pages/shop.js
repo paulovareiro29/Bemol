@@ -1,5 +1,3 @@
-
-
 //SIDEBAR
 $(".shop-filter__menu__content").animate(
   {
@@ -91,7 +89,9 @@ $("#product-modal").modal({
 
 $(".product_item__wrapper__add-cart").click((e) => {
   if ($(window).width() < 768) {
-    window.location.href = "/product?ref=" + $(e.target).parents(".product_item").first().attr("data-product-id")
+    window.location.href =
+      "/product?ref=" +
+      $(e.target).parents(".product_item").first().attr("data-product-id");
   } else {
     const product = getProductByRef(
       $(e.target).parents(".product_item").first().attr("data-product-id")
@@ -110,9 +110,9 @@ $(".product_item__wrapper__add-cart").click((e) => {
                                 <span class="product-modal__dialog__content__info__header__brand">${
                                   product.type
                                 }</span>
-                                <h4 class="product-modal__dialog__content__info__header__name">${
+                                <h4 class="product-modal__dialog__content__info__header__name"><a href="/product.html?ref=${product.ref}">${
                                   product.name
-                                }
+                                }</a>
                                 </h4>
                             </div>
                             <div class="product-modal__dialog__content__info__header__price">
@@ -133,13 +133,23 @@ $(".product_item__wrapper__add-cart").click((e) => {
                                 : ``
                             }
                             <div class="product-modal__dialog__content__info__body__ref">
-                                <span>Ref. <strong>${product.ref}</strong></span>
+                                <span>Ref. <strong>${
+                                  product.ref
+                                }</strong></span>
                             </div>
                             <span
-                                class="product-modal__dialog__content__info__body__available product-modal__dialog__content__info__body__available--${product.available}">
-                                <span>${product.available == "unavailable" ? "Indísponivel" :
-                                        product.available == "available" ? "Disponível" :
-                                        product.available == "partial" ? "Quase Esgotado" : ""}</span>
+                                class="product-modal__dialog__content__info__body__available product-modal__dialog__content__info__body__available--${
+                                  product.available
+                                }">
+                                <span>${
+                                  product.available == "unavailable"
+                                    ? "Indísponivel"
+                                    : product.available == "available"
+                                    ? "Disponível"
+                                    : product.available == "partial"
+                                    ? "Quase Esgotado"
+                                    : ""
+                                }</span>
                             </span>
                         </div>
 
