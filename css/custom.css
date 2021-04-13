@@ -212,6 +212,12 @@
   -webkit-appearance: none;
 }
 
+.wic-textarea {
+  height: 152px;
+  resize: none;
+  padding: 8px 17px;
+}
+
 .wic-checkbox {
   display: block;
   position: relative;
@@ -319,6 +325,30 @@
 }
 .wic-alert--success > .wic-alert__close > img {
   content: url("../../../images/icons/close.svg ");
+}
+
+.wic-breadcrumb__list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.wic-breadcrumb__list > :not(:first-child) {
+  position: relative;
+  padding-left: 32px;
+  margin-left: 16px;
+  font-weight: bold;
+  font-size: var(--fz-xl);
+  line-height: 32px;
+  color: var(--secondary);
+}
+.wic-breadcrumb__list > :not(:first-child)::before {
+  position: absolute;
+  content: url("../../../images/icons/arrow_right--green.svg");
+  width: 16px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  left: 0;
 }
 
 @media (max-width: 768px) {
@@ -1862,6 +1892,12 @@ body p {
 .button--secondary {
   background: var(--secondary);
   color: var(--white);
+  padding: 12px;
+}
+.button--outline {
+  background: var(--white);
+  color: var(--neutral);
+  border: 1px solid var(--neutral);
   padding: 12px;
 }
 .button--outline-primary {

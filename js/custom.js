@@ -25,7 +25,7 @@ for (let i = 0; i < 12; i++) {
     ref: 123450 + i,
     type: "Embal",
     name: "Forma de alumínio <br> 80 x 50",
-    price: "35,00",
+    price: 35.00,
     available: random(available),
     recyclable: random(trueOrFalse),
     discount: (Math.random() * 100).toFixed(0),

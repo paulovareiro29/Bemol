@@ -134,6 +134,13 @@ body {
     padding: 12px;
   }
 
+  &--outline {
+    background: var(--white);
+    color: var(--neutral);
+    border: 1px solid var(--neutral);
+    padding: 12px;
+  }
+
   &--outline-primary {
     background: var(--white);
     color: var(--primary);

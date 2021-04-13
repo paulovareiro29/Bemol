@@ -1,0 +1,39 @@
+@import '../breakpoints';
+
+.wic-breadcrumb {
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+
+        >:not(:first-child) {
+            position: relative;
+
+            padding-left: 32px;
+            margin-left: 16px;
+
+            font-weight: bold;
+            font-size: var(--fz-xl);
+            line-height: 32px;
+
+            color: var(--secondary);
+
+            &::before {
+                position: absolute;
+                content: url("../../../images/icons/arrow_right--green.svg");
+
+                width: 16px;
+                height: 32px;
+
+                display: flex;
+                align-items: center;
+
+                // top: 50%;
+                // transform: translateY(-50%);
+                left: 0;
+            }
+        }
+    }
+
+
+}
