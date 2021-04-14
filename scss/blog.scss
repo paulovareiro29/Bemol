@@ -1,0 +1,144 @@
+@use './partials/blog/blog-filter';
+@use './partials/blog/blog-filterorder';
+@use './partials/blog/blog-modal';
+@use './partials/blog/blog-grid';
+@use './partials/blog/blog-item';
+
+@import './partials/breakpoints';
+
+
+.section {
+
+
+
+    &--blog {
+        padding-bottom: 120px;
+
+        @include tablet{
+            padding-bottom: 80px;
+        }
+
+        &__container {
+            padding: 0px 96px;
+
+            @include laptop {
+                padding: 0px 32px;
+            }
+
+            @include tablet {
+                padding: 0px 0px;
+            }
+
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                &__title {
+                    font-weight: bold;
+                    font-size: 32px;
+                    line-height: 40px;
+
+                    color: var(--primary);
+                    text-align: center;
+                    padding-right: 32px;
+                }
+
+                &__options {
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-grow: 1;
+
+                    >* {
+                        max-width: 256px;
+
+                    }
+
+                    >button {
+                        width: 40px;
+                        height: 40px;
+            
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+            
+                        border-radius: 50%;
+                        border: 1px solid var(--background-tertiary);
+            
+                        &:not(:last-child) {
+                            margin-right: 8px;
+                        }
+            
+            
+                        @include tablet {
+                            display: flex;
+                        }
+                    }
+
+                    &__order {
+                        h6 {
+                            font-weight: normal;
+                            font-size: var(--fz-xs);
+                            line-height: 20px;
+            
+                            color: var(--text-tertiary);
+            
+                            margin-bottom: 8px !important;
+                        }
+                    }
+
+                    &__itemperpage {
+                        h6 {
+                            font-weight: normal;
+                            font-size: var(--fz-xs);
+                            line-height: 20px;
+            
+                            color: var(--text-tertiary);
+            
+                            margin-bottom: 8px !important;
+                        }
+                    }
+                }
+            }
+
+            &__body {
+                padding-top: 32px;
+               
+            }
+
+            &__footer {
+                margin-top: -32px;
+
+                @include tablet {
+                    margin-top: 0px;
+                }
+
+                &__pagination {
+                    .page-item {
+                        .page-link {
+                            font-weight: bold;
+                            font-size: var(--fz-md);
+                            line-height: 24px;
+        
+                            text-align: center;
+                            letter-spacing: 0.0625em;
+        
+                            color: var(--secondary);
+        
+                            padding: 0;
+                            width: 24px;
+                            height: 24px;
+                        }
+        
+                        &.active {
+                            .page-link{
+                                background-color: var(--primary) !important;
+                                color: var(--white) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

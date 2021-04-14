@@ -1,0 +1,29 @@
+@import '../breakpoints';
+
+.blog-grid {
+
+    .grid-item{
+        cursor: default;
+        padding: 0px 32px 32px 0px !important;
+
+        @include tablet {
+            padding: 0px 20px 32px 0px !important;
+        }
+
+        &:nth-child(2n){
+            padding-right: 16px !important;
+            
+            @include tablet {
+                padding-right: 20px !important;
+            }
+        }
+        margin-bottom: 32px;
+    
+        @include tablet {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+
+    }
+}

@@ -1,0 +1,75 @@
+@import './partials/breakpoints';
+
+
+.section {
+
+    &--terms {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        &__container {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__wrapper {
+            width: 735px;
+
+        }
+
+        &__header {
+
+            &__title {
+                padding-bottom: 56px;
+
+                @include tablet {
+                    padding-bottom: 24px;
+                }
+
+                >h3 {
+                    font-family: Barlow;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 40px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #21b2a6;
+
+                    @include tablet {
+                        font-size: 28px;
+                        line-height: 36px;
+                    }
+
+                }
+            }
+        }
+
+        &__content {
+
+            >p {
+                margin-bottom: 32px !important;
+                font-family: Barlow;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: black;
+            }
+
+            >h6 {
+                font-family: Barlow;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #21b2a6;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@import './partials/breakpoints';
+
+
+.section {
+
+    &--image-divider {
+        width: 100%;
+        padding: 0;
+
+        &__image {
+            position: relative;
+            height: 240px;
+            width: 100%;
+
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background: var(--primary-secondary);
+                mix-blend-mode: multiply;
+            }
+
+            >img {
+                position: absolute;
+                min-width: 100%;
+                min-height: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
+        }
+    }
+
+    &--contacts {
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+
+
+
+            padding: 0px 96px;
+
+            @include laptop {
+                padding: 0px;
+            }
+
+
+            @include tablet {
+                flex-direction: column;
+
+            }
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: var(--fz-lg);
+            line-height: 28px;
+
+
+            color: var(--primary);
+
+            margin-bottom: 32px !important;
+
+        }
+
+        &__info {
+            white-space: nowrap;
+
+            margin-right: 64px;
+
+            @include tablet {
+                margin-bottom: 80px;
+            }
+
+            &__content {
+
+                li {
+                    display: flex;
+                    align-items: flex-start;
+
+                    >img {
+                        padding-top: 4px;
+                        margin-right: 20px;
+                    }
+
+                    >p {
+                        font-weight: normal;
+                        font-size: var(--fz-md);
+                        line-height: 24px;
+
+                        color: var(--neutral);
+
+                        >strong {
+                            font-weight: normal;
+
+                            color: var(--primary);
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 32px;
+                    }
+                }
+
+            }
+        }
+
+        &__form {
+            width: 544px;
+
+            @include laptop {
+                width: 456px;
+            }
+
+            @include tablet {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+
+            .wic-form__control {
+                width: 100%;
+                .wic-input{
+                    width: 100%;
+                }
+            }
+
+            .button[type="submit"] {
+                margin-top: 16px;
+                width: 100%;
+            }
+        }
+    }
+
+}

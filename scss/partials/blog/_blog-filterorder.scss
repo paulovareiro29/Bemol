@@ -1,0 +1,75 @@
+@import '../breakpoints';
+
+.blog-order-filter {
+
+    >:not(:last-child){
+        margin-bottom: 24px !important;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    &__checkbox {
+        display: block;
+        position: relative;
+        padding-left: 40px;
+        cursor: pointer;
+        font-weight: normal;
+        font-size: var(--fz-md);
+        line-height: 24px;
+
+        color: var(--text-primary);
+
+        &:hover {
+            .blog-order-filter__checkbox__checkmark {
+                background-color: #DBEEF0;
+            }
+        }
+
+        &__input {
+            position: absolute;
+            opacity: 0;
+
+            height: 0;
+            width: 0;
+
+            &:checked {
+                ~.blog-order-filter__checkbox__checkmark {
+                    background-color: var(--primary);
+
+                    &::after {
+                        display: block;
+                    }
+                }
+
+            }
+        }
+
+        &__checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            border: 1px solid var(--background-tertiary);
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+
+                left: 8.5px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

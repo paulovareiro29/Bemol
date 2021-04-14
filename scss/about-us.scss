@@ -1,0 +1,86 @@
+@import './partials/breakpoints';
+
+
+.section {
+
+    &--image-divider {
+        width: 100%;
+        padding: 0;
+
+        &__image {
+            position: relative;
+            height: 240px;
+            width: 100%;
+
+            >img {
+                position: absolute;
+                min-width: 100%;
+                min-height: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include phone {
+                    content: url('../images/about-us_mobile.png');
+
+                }
+            }
+
+            @include tablet {
+                height: 160px;
+            }
+        }
+    }
+
+    &--about-us {
+
+
+        padding-top: 80px;
+        padding-bottom: 120px;
+
+        @include tablet {
+            padding-top: 40px;
+            padding-bottom: 80px;
+        }
+
+        &__container {
+
+            display: flex;
+            justify-content: center;
+        }
+
+
+        &__content {
+
+            max-width: 544px;
+
+            >h5 {
+
+                font-family: Barlow;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: var(--primary);
+
+            }
+
+            >p {
+
+                margin-top: 32px !important;
+                font-family: Barlow;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                color: var(--text-primary);
+
+            }
+        }
+    }
+
+}

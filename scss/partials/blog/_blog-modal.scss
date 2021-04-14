@@ -1,0 +1,35 @@
+@import '../breakpoints';
+
+
+.blog-modal {
+    min-width: 320px;
+    position: absolute;
+    top: 0;
+
+    background: var(--white);
+
+    // min-height: 100vh;
+    height: fit-content;
+
+    &__header {
+        padding: 36px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-weight: bold;
+            font-size: var(--fz-xl);
+            line-height: 32px;
+
+            color: var(--primary);
+        }
+    }
+
+    &__content {
+        padding: 40px 32px 64px 32px;
+        min-height: calc(100vh - 104px);
+    }
+
+
+}

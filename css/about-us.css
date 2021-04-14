@@ -1,0 +1,66 @@
+.section--image-divider {
+  width: 100%;
+  padding: 0;
+}
+.section--image-divider__image {
+  position: relative;
+  height: 240px;
+  width: 100%;
+}
+.section--image-divider__image > img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 480px) {
+  .section--image-divider__image > img {
+    content: url("../images/about-us_mobile.png");
+  }
+}
+@media (max-width: 768px) {
+  .section--image-divider__image {
+    height: 160px;
+  }
+}
+.section--about-us {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+@media (max-width: 768px) {
+  .section--about-us {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+}
+.section--about-us__container {
+  display: flex;
+  justify-content: center;
+}
+.section--about-us__content {
+  max-width: 544px;
+}
+.section--about-us__content > h5 {
+  font-family: Barlow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary);
+}
+.section--about-us__content > p {
+  margin-top: 32px !important;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+/*# sourceMappingURL=about-us.css.map */
