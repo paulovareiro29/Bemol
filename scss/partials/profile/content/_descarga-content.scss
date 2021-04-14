@@ -1,0 +1,65 @@
+@import '../../breakpoints';
+
+.unloadingaddress {
+    width: 100%;
+
+    &__unload {
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+
+        border-bottom: 1px solid var(--primary-secondary);
+    }
+
+    
+    .wic-form__control {
+        // flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .wic-input {
+        width: 100%;
+        // max-width: 256px;
+    }
+
+    .morada {
+        width: 140%;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    .unloading{
+        &-empresa {
+            width: 140%;
+
+            ~*:not(:last-child) {
+                width: 60%;
+            }
+
+            @include tablet {
+                width: 100%;
+
+                ~*{
+                    display: none;
+                }
+            }
+        }
+
+        &-morada {
+            width: 140%;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+
+        &-cpostal {
+            width: 60%;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+@import '../breakpoints';
+
+.profile {
+    &__logout {
+        margin-top: 44px;
+        height: 40px;
+        width: 256px;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &-menu {
+        position: relative;
+        min-width: 256px;
+        // max-width: 256px;
+        width: 100%;
+        height: fit-content;
+
+        margin-bottom: 80px;
+
+        >h1 {
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 36px;
+
+            color: var(--primary);
+        }
+
+        >span {
+            margin-top: 8px;
+
+            font-weight: normal;
+            font-size: var(--fz-md);
+            line-height: 24px;
+
+            color: var(--text-primary);
+        }
+
+        &__list {
+            width: 256px;
+            margin-top: 24px;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            &__item {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+
+                &--active {
+                    .profile-menu__list__item__button {
+                        >button {
+                            color: var(--primary);
+                        }
+                    }
+
+                    // .profile-menu__list__item__content {
+                    //     display: flex;
+
+                    // }
+                }
+
+
+
+
+                &__button {
+                    position: relative;
+                    border-bottom: 1px solid var(--background-tertiary);
+
+                    border-radius: 0px;
+                    width: 100%;
+
+                    >button {
+                        padding: 16px 0px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-weight: 500;
+                        font-size: var(--fz-md);
+                        line-height: 24px;
+                        color: var(--text-primary);
+                        width: 100%;
+
+                        &:hover {
+                            color: var(--primary);
+                        }
+
+                        &::after {
+                            content: url("/images/icons/arrow_right--green.svg");
+                            width: 16px;
+                            height: 16px;
+
+                            position: absolute;
+
+                            right: 0;
+                        }
+
+                    }
+
+                    // &:last-child {
+                    //     border: 0;
+                    // }
+                }
+
+                &__content {
+                    // overflow-y: hidden;
+                    // overflow-x: auto;
+
+
+                    position: absolute;
+                    top: 0;
+                    left: calc(256px + 32px);
+
+                    width: calc(100% - 256px - 32px);
+
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    @include tablet {
+                        position: relative;
+                        left: 0;
+                        width: 100%;
+
+                        margin-top: 32px;
+
+                        margin-bottom: 40px;
+
+                    }
+
+                    &__title {
+                        margin-top: 40px !important;
+                        margin-bottom: 32px !important;
+                        font-weight: bold;
+                        font-size: var(--fz-xl);
+                        line-height: 32px;
+
+
+                        color: var(--primary);
+
+                        @include tablet {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

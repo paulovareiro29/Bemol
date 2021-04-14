@@ -1,0 +1,134 @@
+@import '../../breakpoints';
+
+.favorites {
+    width: 100%;
+
+    &-grid {
+        width: 100%;
+        margin: 0;
+
+        .col-6,
+        .col-md-4 {
+            padding: 0px 16px;
+            padding-bottom: 64px;
+
+
+            @include tablet {
+                padding: 0px 8px;
+                padding-bottom: 32px;
+
+            }
+
+            .favorite-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                width: 100%;
+            }
+
+            .product_item {
+                width: 100%;
+
+                &__wrapper__circle {
+                    @include laptop {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            .remove-item-btn {
+                width: 100%;
+                margin-top: 32px;
+                height: 40px;
+
+                font-weight: bold;
+                font-size: var(--fz-md);
+                line-height: 24px;
+
+                text-align: center;
+                letter-spacing: 0.0625em;
+
+                color: var(--secondary);
+
+                @include tablet {
+                    margin-top: 16px;
+                }
+
+            }
+        }
+
+    }
+
+
+}
+
+.favorites-empty {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 24px 0px 0px 0px;
+
+    >img {
+        width: 160px;
+        height: 160px;
+
+        @include tablet {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    >h4 {
+        font-weight: bold;
+        font-size: var(--fz-xl);
+        line-height: 32px;
+        text-align: center;
+
+        color: var(--secondary);
+    }
+}
+
+
+.favorites-empty-btn {
+
+
+    &--desktop {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        width: calc(33% - 16px);
+        height: 40px;
+
+        @include tablet {
+            position: relative;
+            right: 0px;
+            top: 0;
+
+            margin-left: auto;
+            margin-bottom: 32px;
+        }
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    &--mobile {
+        display: none;
+
+        @include phone {
+            display: block;
+            margin-left: auto;
+            margin-bottom: 32px;
+        }
+    }
+
+
+
+}

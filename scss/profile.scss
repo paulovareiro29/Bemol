@@ -1,0 +1,19 @@
+@use './partials/profile/profile';
+@use './partials/profile/content/profile-content';
+@use './partials/profile/content/descarga-content';
+@use './partials/profile/content/budgets-content';
+@use './partials/profile/content/accounts-content';
+@use './partials/profile/content/favorites-content';
+
+@import './partials/breakpoints';
+
+
+.section {
+    &--profile {
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import '../../breakpoints';
+
+.contacorrente { 
+    width: 100%;
+
+    &-empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        >img {
+            width: 160px;
+            height: 160px;
+
+            @include tablet {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        >h4 {
+            font-weight: bold;
+            font-size: var(--fz-xl);
+            line-height: 32px;
+
+            text-align: center;
+            color: var(--secondary);
+            margin-top: 16px;
+        }
+    }
+
+    &-table {
+        width: 100%;
+    }
+
+    &-date {
+        color: var(--primary);
+    }
+
+    &-expire-date,
+    &-document,
+    &-ndoc {
+        color: var(--neutral);
+    }
+
+    &-price,
+    &-pendent {
+        font-weight: bold;
+        &::before{
+            content: '€ ';
+        }
+    }
+
+    &-price {
+        color: var(--primary);
+    }
+
+    &-pendent {
+        color: var(--danger);
+    }
+}

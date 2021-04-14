@@ -16,7 +16,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <link href="css/custom.css" rel="stylesheet">
-    <link href="css/homepage.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,10 +25,10 @@
             <div class="topbar__container wic-container">
 
                 <ul class="topbar__socials">
-                    <li><a href="https://www.facebook.com/Bemol-VF-769865823078429"><img src="images/icons/facebook.svg" alt=""></a></li>
-                    <li><a href="#"><img src="images/icons/instagram.svg" alt=""></a></li>
-                    <li><a href="#"><img src="images/icons/linkedin.svg" alt=""></a></li>
-                    <li><a href="#"><img src="images/icons/twitter.svg" alt=""></a></li>
+                    <li><a href=""><img src="images/icons/facebook.svg" alt=""></a></li>
+                    <li><a href=""><img src="images/icons/instagram.svg" alt=""></a></li>
+                    <li><a href=""><img src="images/icons/linkedin.svg" alt=""></a></li>
+                    <li><a href=""><img src="images/icons/twitter.svg" alt=""></a></li>
                 </ul>
 
                 <div class="topbar__title">
@@ -94,9 +94,9 @@
                 <nav class="header__navbar__links wic-container">
                     <ul>
                         <li><button type="button" class="header__navbar__trigger">PRODUTOS</button></li>
-                        <li><a href="/contacts">CONTACTOS</a></li>
-                        <li><a href="/blog">BLOG</a></li>
-                        <li><a href="/about-us">SOBRE NÓS</a></li>
+                        <li><a href="#">CONTACTOS</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">SOBRE NÓS</a></li>
                         <li>
                             <a href="#">
                                 <img src="images/icons/support.svg" alt="">
@@ -287,12 +287,12 @@
 
                         </ul>
                         <ul class="header__navbar__menu__links">
-                            <li><a href="/login">LOGIN</a></li>
-                            <li><a href="/register">REGISTO</a></li>
-                            <li><a href="/profile?option=favorites">FAVORITOS</a></li>
-                            <li><a href="/contacts">CONTACTOS</a></li>
-                            <li><a href="/blog">BLOG</a></li>
-                            <li><a href="/about-us">SOBRE NÓS</a></li>
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#">REGISTO</a></li>
+                            <li><a href="#">FAVORITOS</a></li>
+                            <li><a href="#">CONTACTOS</a></li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">SOBRE NÓS</a></li>
                         </ul>
                     </div>
                 </div>
@@ -301,273 +301,230 @@
     </header>
 
     <main>
-        <section class="section section--hero">
-            <div class="hero__container">
-                <div class="hero__container__background">
-                    <img src="images/hero.png" alt="">
+        <div class="wic-division">
+            <ul class="wic-division__container wic-container">
+                <li class="wic-division__container__item wic-division__container__item--portes">
+                    <img src="images/icons/division/van.svg" alt="">
+                    <span>PORTES GRÁTIS</span>
+                </li>
+                <li class="wic-division__container__item wic-division__container__item--trocas">
+                    <img src="images/icons/division/return.svg" alt="">
+                    <span>TROCAS E DEVOLUÇÕES</span>
+                </li>
+                <li class="wic-division__container__item wic-division__container__item--pagamento">
+                    <img src="images/icons/division/secure.svg" alt="">
+                    <span>PAGAMENTO SEGURO</span>
+                </li>
+            </ul>
+            <button class="wic-division__close"><img src="images/icons/close.svg" alt=""></button>
+        </div>
+
+        <section class="section section--profile">
+            <div class="section--profile__container wic-container">
+                <div class="profile-menu">
+                    <h1>Olá,<br><span class="profile-name">Alexandre Vieira</span></h1>
+                    <h6>Nº Client <span class="profile-id">117</span></h6>
+
+                    <ul class="profile-menu__list">
+                        <li class="profile-menu__list__item profile-menu__list__item--active">
+                            <div class="profile-menu__list__item__button">
+                                <button id="button-profile">Meu perfil</button>
+                            </div>
+                            <div class="profile-menu__list__item__content">
+                                <h4 class="profile-menu__list__item__content__title">Meu perfil</h4>
+                                <div id="profile" class="profile">
+                                    <form action="" class="wic-form">
+                                        <div class="wic-form__row">
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="username">Utilizador</label>
+                                                <input class="wic-input" type="text"
+                                                    placeholder="Insira o seu nome de utilizador.." id="username"
+                                                    name="username" />
+                                            </div>
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="contact-name">Nome de contacto</label>
+                                                <input class="wic-input" type="text"
+                                                    placeholder="Insira o seu nome de contacto.." id="contact-name"
+                                                    name="contact-name" />
+                                            </div>
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="nif">NIF</label>
+                                                <input class="wic-input" type="number" placeholder="Insira o seu NIF.."
+                                                    id="nif" name="nif" />
+                                            </div>
+                                        </div>
+                                        <div class="wic-form__row">
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="email">E-mail</label>
+                                                <input class="wic-input" type="email"
+                                                    placeholder="Insira o seu e-mail.." id="email" name="email" />
+                                            </div>
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="telefone">Telefone / Telemóvel</label>
+                                                <input class="wic-input" type="number"
+                                                    placeholder="Insira o seu nome de contacto.." id="telefone"
+                                                    name="telefone" />
+                                            </div>
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="pais">Pais*</label>
+                                                <select class="wic-input form-control" name="pais" id="pais">
+                                                    <option selected="selected" value="portugal">Portugal</option>
+                                                    <option value="espanha">Espanha</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="wic-form__row">
+                                            <div class="wic-form__control morada">
+                                                <label class="wic-label" for="morada">Morada</label>
+                                                <input class="wic-input" type="text" placeholder="Insira a sua morada.."
+                                                    id="morada" name="morada" />
+                                            </div>
+                                            <div class="wic-form__control cpostal">
+                                                <label class="wic-label" for="cpostal">Código Postal</label>
+                                                <input class="wic-input" type="text"
+                                                    placeholder="Insira o seu código postal.." id="cpostal"
+                                                    name="cpostal" />
+                                            </div>
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="localidade">Localidade</label>
+                                                <input class="wic-input" type="text"
+                                                    placeholder="Insira a sua localidade.." id="localidade"
+                                                    name="Localidade" />
+                                            </div>
+                                        </div>
+                                        <div class="wic-form__row">
+                                            <button type="submit" class="button button--primary">GUARDAR
+                                                ALTERAÇÕES</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="profile-menu__list__item">
+                            <div class="profile-menu__list__item__button">
+                                <button id="button-unloadingaddress">Locais de descarga</button>
+                            </div>
+                            <div class="profile-menu__list__item__content">
+                                <h4 class="profile-menu__list__item__content__title">Locais de descarga</h4>
+                                <div id="unloadingaddress" class="unloadingaddress">
+
+                                    <div class="unloadingaddress__unload">
+                                        <div class="wic-form__control ">
+                                            <label class="wic-label" for="local_descarga">Selecione o local de
+                                                descarga</label>
+                                            <select class="wic-input form-control" name="local_descarga"
+                                                id="local_descarga">
+                                                <option selected="selected" value="bemol">BEMOL VF - COMÉRCIO, LDA
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <form action="" class="wic-form">
+                                        <div class="wic-form__row">
+                                            <div class="wic-form__control unloading-empresa">
+                                                <label class="wic-label" for="empresa">Empresa</label>
+                                                <input class="wic-input" type="text"
+                                                    placeholder="Insira a sua empresa.." id="unloading-empresa"
+                                                    name="empresa" />
+                                            </div>
+                                            <div class="wic-form__control"></div>
+                                            <div class="wic-form__control"></div>
+                                        </div>
+                                        <div class="wic-form__row">
+                                            <div class="wic-form__control unloading-morada">
+                                                <label class="wic-label" for="morada">Morada</label>
+                                                <input class="wic-input" type="text" placeholder="Insira a sua morada.."
+                                                    id="unloading-morada" name="morada" />
+                                            </div>
+                                            <div class="wic-form__control unloading-cpostal">
+                                                <label class="wic-label" for="cpostal">Código Postal</label>
+                                                <input class="wic-input" type="text"
+                                                    placeholder="Insira o seu código postal.." id="unloading-cpostal"
+                                                    name="cpostal" />
+                                            </div>
+                                            <div class="wic-form__control">
+                                                <label class="wic-label" for="cpostal">Localidade</label>
+                                                <input class="wic-input" type="text"
+                                                    placeholder="Insira a sua localidade.." id="unloading-localidade"
+                                                    name="localidade" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="profile-menu__list__item">
+                            <div class="profile-menu__list__item__button">
+                                <button id="button-budgets">Orçamentos</button>
+                            </div>
+                            <div class="profile-menu__list__item__content">
+                                <h4 class="profile-menu__list__item__content__title">Encomendas</h4>
+                                <div id="budgets" class="budgets">
+                                    <table class="wic-table budgets-table ">
+                                        <thead>
+                                            <tr>
+                                                <th>ENCOMENDA</th>
+                                                <th class="text-center">DATA</th>
+                                                <th class="text-center">ESTADO</th>
+                                                <th class="text-right">TOTAL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="budgets-table__content">
+                                            <!-- FILLED WITH JAVASCRIPT  -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="profile-menu__list__item">
+                            <div class="profile-menu__list__item__button">
+                                <button id="button-accounts">Conta-corrente</button>
+                            </div>
+                            <div class="profile-menu__list__item__content">
+                                <h4 class="profile-menu__list__item__content__title">Conta-corrente</h4>
+                                <div id="contacorrente" class="contacorrente">
+                                    <table class="wic-table contacorrente-table ">
+                                        <thead>
+                                            <tr>
+                                                <th>DATA DO DOCUMENTO</th>
+                                                <th class="text-center">DATA DE VENCIMENTO</th>
+                                                <th class="text-center">DOCUMENTO</th>
+                                                <th class="text-center">Nº DOC</th>
+                                                <th class="text-center">VALOR ORIGINAL</th>
+                                                <th class="text-center">VALOR PENDENTE</th>
+                                                <th class="text-right">ESTADO</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="contacorrente-table__content">
+                                            <!-- FILLED WITH JAVASCRIPT  -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="profile-menu__list__item">
+                            <div class="profile-menu__list__item__button">
+                                <button id="button-favorites">Favoritos</button>
+                            </div>
+                            <div class="profile-menu__list__item__content">
+                                <h4 class="profile-menu__list__item__content__title">Favoritos</h4>
+                                    <button class="button button--outline favorites-empty-btn favorites-empty-btn--desktop">REMOVER TUDO</button>
+                                    <button class="button favorites-empty-btn favorites-empty-btn--mobile"><img src="images/icons/trash--green.svg" alt=""></button>
+                                <div id="favorites" class="favorites ">
+                                    <div class="favorites-grid row">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="button button--outline-primary profile__logout">TERMINAR SESSÃO</button>
                 </div>
-
-                <div class="hero__container__info wic-container">
-                    <h3>PROMOÇÃO ESCLUSIVA A PROFISSIONAIS</h3>
-                    <h1>30%</h1>
-
-                    <button class="button button--primary"><span>DESCUBRA MAIS</span><img
-                            src="images/icons/arrow_right.svg" alt=""></button>
-                </div>
-
-            </div>
-
-            <div class="wic-division">
-                <ul class="wic-division__container wic-container">
-                    <li class="wic-division__container__item wic-division__container__item--portes">
-                        <img src="images/icons/division/van.svg" alt="">
-                        <span>PORTES GRÁTIS</span>
-                    </li>
-                    <li class="wic-division__container__item wic-division__container__item--trocas">
-                        <img src="images/icons/division/return.svg" alt="">
-                        <span>TROCAS E DEVOLUÇÕES</span>
-                    </li>
-                    <li class="wic-division__container__item wic-division__container__item--pagamento">
-                        <img src="images/icons/division/secure.svg" alt="">
-                        <span>PAGAMENTO SEGURO</span>
-                    </li>
-                </ul>
-                <button class="wic-division__close"><img src="images/icons/close.svg" alt=""></button>
-            </div>
-        </section>
-
-        <section class="section section--products">
-
-            <div class="section--products__desktop wic-container">
-                <div class="row">
-                    <div class="col">
-                        <div class="section--products__item">
-                            <img src="images/icons/products/cleaning.svg" alt="">
-                            <span>HIGIENE<br> E LIMPEZA</span>
-                        </div>
-
-                        <div class="section--products__item">
-                            <img src="images/icons/products/identification.svg" alt="">
-                            <span>IDENTIFICAÇÃO</span>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="section--products__item">
-                            <img src="images/icons/products/package.svg" alt="">
-                            <span>EMBALAGEM</span>
-                        </div>
-                        <div class="section--products__item">
-                            <img src="images/icons/products/uniform.svg" alt="">
-                            <span>FARMANENTO<br>E PROTEÇÃO</span>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="section--products__item">
-                            <img src="images/icons/products/bag.svg" alt="">
-                            <span>SACOS/<br>SAQUETAS</span>
-                        </div>
-                        <div class="section--products__item">
-                            <img src="images/icons/products/disposal.svg" alt="">
-                            <span>DESCARTÁVEIS</span>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="section--products__item">
-                            <img src="images/icons/products/paper.svg" alt="">
-                            <span>PAPÉIS</span>
-                        </div>
-                        <div class="section--products__item">
-                            <img src="images/icons/products/other.svg" alt="">
-                            <span>OUTROS</span>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="section--products__item">
-                            <img src="images/icons/products/pastry.svg" alt="">
-                            <span>DECORAÇÃO/<br>PASTELARIA</span>
-                        </div>
-                        <div class="section--products__item">
-                            <img src="images/icons/products/office.svg" alt="">
-                            <span>ESCRITÓRIO</span>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="section--products__mobile">
-                <div class="carousel small" data-items="3" data-dots="false" data-items-sm="3" data-items-xs="3">
-                    <div class="section--products__item">
-                        <img src="images/icons/products/cleaning.svg" alt="">
-                        <span>HIGIENE<br> E LIMPEZA</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/package.svg" alt="">
-                        <span>EMBALAGEM</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/bag.svg" alt="">
-                        <span>SACOS/<br>SAQUETAS</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/paper.svg" alt="">
-                        <span>PAPÉIS</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/pastry.svg" alt="">
-                        <span>DECORAÇÃO/<br>PASTELARIA</span>
-                    </div>
-
-                    <div class="section--products__item">
-                        <img src="images/icons/products/identification.svg" alt="">
-                        <span>IDENTIFICAÇÃO</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/uniform.svg" alt="">
-                        <span>FARMANENTO<br>E PROTEÇÃO</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/disposal.svg" alt="">
-                        <span>DESCARTÁVEIS</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/other.svg" alt="">
-                        <span>OUTROS</span>
-                    </div>
-                    <div class="section--products__item">
-                        <img src="images/icons/products/office.svg" alt="">
-                        <span>ESCRITÓRIO</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--highlights">
-            <div class="section--highlights__container wic-container">
-                <div class="section__title">
-                    <h1></h1>
-                </div>
-
-                <div class="section--highlights__desktop carousel" data-items="4" data-dots="false">
-                    <!-- FILLED WITH JAVASCRIPT -->
-                </div>
-
-                <div class="section--highlights__mobile">
-                    <!-- FILLED WITH JAVASCRIPT -->
-                    <div class="section--highlights__mobile__content">
-
-                    </div>
-
-                    <button class="col-8 button button--primary section--highlights__mobile__see-more">VER MAIS</button>
-                </div>
-
-            </div>
-
-
-        </section>
-
-        <section class="section section--offers">
-            <div class="wic-container">
-                <div class="section__title">
-                    <h1>MELHORES OFERTAS</h1>
-                </div>
-            </div>
-
-            <div class="section--offers__container">
-                <img src="images/offer1.png" alt="">
-                <img src="images/offer2.png" alt="">
-            </div>
-
-        </section>
-
-        <section class="section section--team">
-            <div class="section--team__container wic-container">
-                <div class="section__title">
-                    <h1>EQUIPA</h1>
-                </div>
-                <div class="section--team__carousel carousel" data-items="4" data-dots="false">
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/alexandre.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">ALEANDRE VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/filipa.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">FILIPA VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/carina.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">CARINA VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/jose.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">JOSE VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/alexandre.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">ALEXANDRE VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/filipa.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">FILIPA VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/carina.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">CARINA VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-member__photo">
-                            <img src="images/team/jose.png" alt="">
-                        </div>
-                        <div class="team-member__info">
-                            <h3 class="team-member__info__name">JOSE VIEIRA</h3>
-                            <h6 class="team-member__info__role">Diretor Financeiro</h6>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -699,7 +656,7 @@
     <script src="js/functions.js"></script>
     <script src="js/custom.js"></script>
 
-    <script src="js/pages/homepage.js"></script>
+    <script src="js/pages/profile.js"></script>
 </body>
 
 </html>

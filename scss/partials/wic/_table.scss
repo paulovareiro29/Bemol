@@ -1,0 +1,60 @@
+@import '../breakpoints';
+
+.wic-table {
+    width: 100%;
+
+    thead {
+      
+        border-bottom: 1px solid var(--background-tertiary);
+
+        th {
+            font-weight: normal;
+            font-size: var(--fz-xs);
+            line-height: 20px;
+
+            color: var(--text-secondary);
+
+            padding: 16px 8px;
+
+            white-space: nowrap;
+
+            &:first-child{
+                padding-left: 32px;
+
+                @include tablet {
+                    padding-left: 0px;
+                }
+            }
+
+            &:last-child{
+                padding-right: 32px;
+
+                @include tablet {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+
+    tbody {
+
+        td {
+            &:first-child{
+                padding-left: 32px;
+
+                @include tablet {
+                    padding-left: 0px;
+                }
+            }
+            &:last-child{
+                padding-right: 32px;
+
+                @include tablet {
+                    padding-right: 0px;
+                }
+            }
+
+            padding: 16px 0px;
+        }
+    }
+}

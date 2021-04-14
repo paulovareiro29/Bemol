@@ -340,7 +340,7 @@
 }
 
 .shop-order-filter > :not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 }
 .shop-order-filter label {
   margin: 0;

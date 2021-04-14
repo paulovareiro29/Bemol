@@ -333,6 +333,7 @@
                 }
 
                 &__new {
+                    white-space: nowrap;
                     font-weight: bold;
                     font-size: var(--fz-xl);
                     line-height: 32px;
@@ -340,6 +341,7 @@
                 }
 
                 &__old {
+                    white-space: nowrap;
                     position: absolute;
                     bottom: 26px;
 
@@ -482,7 +484,7 @@
                 }
 
                 &__quantity {
-
+                    margin-right: 16px !important;
 
                     >span {
                         font-weight: normal;

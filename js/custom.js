@@ -4,6 +4,8 @@ let client = {
   loggedIn: true,
   cartProducts: [],
   favoriteProducts: [],
+  budgets: [],
+  contascorrente: [],
 };
 let shopProducts = [];
 
@@ -25,7 +27,7 @@ for (let i = 0; i < 12; i++) {
     ref: 123450 + i,
     type: "Embal",
     name: "Forma de alumínio <br> 80 x 50",
-    price: 35.00,
+    price: 35.0,
     available: random(available),
     recyclable: random(trueOrFalse),
     discount: (Math.random() * 100).toFixed(0),
@@ -49,7 +51,33 @@ for (let i = 0; i < 5; i++) {
   });
 
   client.favoriteProducts.push(shopProducts[i]);
+
+  // client.budgets.push({
+  //   id: 123567,
+  //   date: "13 / 03 / 2020",
+  //   status: random(["success","processing"]),
+  //   total: 31.99
+  // })
+
+  // client.contascorrente.push({
+  //   date: "13/03/20",
+  //   expiredate: "13/03/20",
+  //   document: "Documento",
+  //   ndoc: 134,
+  //   price: "75,00",
+  //   pendent: "35,00",
+  //   status: "Em falta"
+  // });
 }
+
+function removeFromFavorites(ref){
+  for (let i = 0; i < client.favoriteProducts.length; i++) {
+    if (client.favoriteProducts[i].ref == ref){
+      client.favoriteProducts.splice(i, 1)
+    }
+  }
+}
+
 //  END TEST
 
 import("./modules/popovers.js");
@@ -178,4 +206,4 @@ $(".wic-division__close").click((e) => {
 //  ALERT
 $(".wic-alert__close").click((e) => {
   $(e.target).parents(".wic-alert").remove();
-})
+});

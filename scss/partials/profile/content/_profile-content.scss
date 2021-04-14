@@ -1,0 +1,42 @@
+@import '../../breakpoints';
+
+.profile {
+    width: 100%;
+
+
+    .wic-form__control{
+        // flex: 1 1 100%;
+        width: 100%;
+    }
+    .wic-input {
+        width: 100%;
+        // max-width: 256px;
+    }
+
+    .morada {
+        width: 140%;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    .cpostal {
+        width: 60%;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    .button[type="submit"]{
+       margin-left: auto;
+       margin-top: 56px;
+
+       @include tablet {
+        width: 100%;
+        margin-top: 40px;
+
+    }
+    }
+}

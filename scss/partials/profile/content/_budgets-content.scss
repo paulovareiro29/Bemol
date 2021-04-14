@@ -1,0 +1,77 @@
+@import '../../breakpoints';
+
+
+.budgets {
+    width: 100%;
+
+    &-empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        >img {
+            width: 160px;
+            height: 160px;
+
+            @include tablet {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        >h4 {
+            font-weight: bold;
+            font-size: var(--fz-xl);
+            line-height: 32px;
+
+            text-align: center;
+            color: var(--secondary);
+            margin-top: 16px;
+        }
+    }
+
+    &-id {
+        font-weight: bold;
+        font-size: var(-fz-md);
+        line-height: 24px;
+
+        color: var(--primary);
+    }
+
+    &-date {
+        font-weight: normal;
+        font-size: var(--fz-md);
+        line-height: 24px;
+
+        color: var(--text-primary);
+    }
+
+    &-status {
+        font-weight: normal;
+        font-size: var(--fz-md);
+        line-height: 24px;
+
+        text-align: center;
+
+        &--success {
+            color: var(--success);
+        }
+
+        &--processing {
+            color: var(--danger);
+        }
+    }
+
+    &-total {
+        font-weight: bold;
+        font-size: var(--fz-md);
+        line-height: 24px;
+
+        color: var(--primary);
+
+        &:before {
+            content: '€ ';
+        }
+    }
+}

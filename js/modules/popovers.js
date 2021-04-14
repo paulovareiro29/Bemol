@@ -14,11 +14,11 @@ function user() {
     popover.content = `
     <div class="navbar-popover--user-loggedin">
       <ul>
-        <li><a href="#">Meu perfil</a></li>
-        <li><a href="#">Locais de descarga</a></li>
-        <li><a href="#">Orçamentos</a></li>
-        <li><a href="#">Conta-corrente</a></li>
-        <li><a href="#">Favoritos</a></li>
+        <li><a href="/profile?option=profile">Meu perfil</a></li>
+        <li><a href="/profile?option=unloadingaddress">Locais de descarga</a></li>
+        <li><a href="/profile?option=budgets">Orçamentos</a></li>
+        <li><a href="/profile?option=accounts">Conta-corrente</a></li>
+        <li><a href="/profile?option=favorites">Favoritos</a></li>
       </ul>
       <button type="button" class="button button--primary logout-button">TERMINAR SESSÃO</button>
     </div>
@@ -77,7 +77,7 @@ ${product.price}
     popover.content = `
       <div class="navbar-popover--favorites">
         ${productsHTML}
-        <a href="/favorites"  class="button button--primary">VER TODOS</a>
+        <a href="/profile?option=favorites"  class="button button--primary">VER TODOS</a>
       </div>
   `;
   } else {
@@ -159,7 +159,7 @@ function cart() {
     popover.content = `
       <div class="navbar-popover--cart">
         ${productsHTML}
-        <a href="cart" class="button button--primary">VER CARRINHO</a>
+        <a href="/cart" class="button button--primary">VER CARRINHO</a>
         <button type="button" class="button button--outline-primary clear-cart-button">LIMPAR CARRINHO</button>
       </div>
   `;
@@ -212,7 +212,12 @@ $("#navbar_favorites_popover").on("show.bs.popover", function () {
 });
 
 $("#navbar_cart_popover").on("show.bs.popover", function () {
-  updatePopover("navbar_cart_popover", cart());
+  if($(window).width() > 768){
+    updatePopover("navbar_cart_popover", cart());
+
+  }else{
+    window.location.href="/cart"
+  }
 });
 
 //  On popover shown, attach clicker events to products
