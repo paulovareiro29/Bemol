@@ -1597,6 +1597,182 @@
   color: var(--text-primary);
 }
 
+.title {
+  display: flex;
+  color: #21b2a6;
+}
+.title > img {
+  margin-right: 20px;
+}
+
+.wic-form > :not(:last-child) {
+  margin-bottom: 16px;
+}
+.wic-form__row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.wic-form__row > :not(:last-child) {
+  margin-right: 32px;
+}
+@media (max-width: 768px) {
+  .wic-form__row > :not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .wic-form__row {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.wic-form__row--reverse {
+  flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .wic-form__row--reverse {
+    flex-direction: column;
+  }
+}
+.wic-form__control {
+  display: flex;
+  flex-direction: column;
+}
+.wic-form__control > .wic-label {
+  margin-bottom: 8px !important;
+}
+.wic-form__control--error > .wic-label {
+  color: var(--danger);
+}
+.wic-form__control--error > .wic-input {
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+.wic-form__control--error > .wic-input::placeholder {
+  color: var(--danger);
+}
+.wic-form__control--success > .wic-label {
+  color: var(--success);
+}
+.wic-form__control--success > .wic-input {
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+.wic-form__control--success > .wic-input::placeholder {
+  color: var(--success);
+}
+.wic-form__link {
+  font-weight: normal;
+  font-size: var(--fz-md);
+  line-height: 24px;
+  color: var(--text-tertiary);
+}
+.wic-form__link > strong {
+  color: var(--primary);
+}
+.wic-form__link--small {
+  font-size: var(--fz-xs);
+  line-height: 20px;
+}
+.wic-form .button[type=submit] {
+  font-weight: bold;
+  font-size: var(--fz-md);
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.0625em;
+  width: 352px;
+}
+@media (max-width: 768px) {
+  .wic-form .button[type=submit] {
+    width: 311px;
+  }
+}
+
+.wic-label {
+  font-weight: normal;
+  font-size: var(--fz-xs);
+  line-height: 20px;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.wic-input {
+  border: 1px solid var(--background-tertiary);
+  font-weight: normal;
+  font-size: var(--fz-md);
+  line-height: 24px;
+  color: var(--text-primary);
+  width: 352px;
+  height: 40px;
+}
+@media (max-width: 768px) {
+  .wic-input {
+    width: 311px;
+  }
+}
+.wic-input::placeholder {
+  color: var(--background-tertiary);
+}
+.wic-input[type=number] {
+  -moz-appearance: textfield;
+}
+.wic-input[type=number]::-webkit-outer-spin-button, .wic-input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.wic-textarea {
+  height: 152px;
+  resize: none;
+  padding: 8px 17px;
+}
+
+.wic-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: var(--fz-md);
+  line-height: 24px;
+  color: var(--text-primary);
+  padding-left: 24px !important;
+}
+.wic-checkbox__checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.wic-checkbox__checkbox:checked ~ .wic-checkbox__checkmark {
+  background-color: var(--primary);
+  border: 0;
+}
+.wic-checkbox__checkbox:checked ~ .wic-checkbox__checkmark::after {
+  display: block;
+}
+.wic-checkbox__checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--background-tertiary);
+}
+.wic-checkbox__checkmark::after {
+  content: url("../../images/icons/checkmark.svg");
+  position: absolute;
+  display: none;
+  top: -1px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+}
+
 :root {
   --primary: #21B2A6;
   --primary-secondary: #dbeef0;

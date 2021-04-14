@@ -1,0 +1,233 @@
+@import './breakpoints';
+
+.title{
+    display: flex;
+    color: #21b2a6;
+
+    >img{
+        margin-right: 20px;
+    }
+
+}
+
+
+.wic-form {
+
+
+
+    >:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__row {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        >:not(:last-child) {
+            margin-right: 32px;
+
+            @include tablet {
+                margin-right: 0px;
+                margin-bottom: 16px;
+            }
+        }
+
+        @include tablet {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        &--reverse {
+            flex-direction: row-reverse;
+
+            @include tablet {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+
+        >.wic-label {
+            margin-bottom: 8px !important;
+        }
+
+        &--error {
+            >.wic-label {
+                color: var(--danger);
+            }
+
+            >.wic-input {
+                color: var(--danger);
+                border: 1px solid var(--danger);
+
+                &::placeholder {
+                    color: var(--danger);
+                }
+            }
+        }
+
+        &--success {
+            >.wic-label {
+                color: var(--success);
+            }
+
+            >.wic-input {
+                color: var(--success);
+                border: 1px solid var(--success);
+
+                &::placeholder {
+                    color: var(--success);
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-weight: normal;
+        font-size: var(--fz-md);
+        line-height: 24px;
+
+        color: var(--text-tertiary);
+
+        >strong {
+            color: var(--primary);
+        }
+
+        &--small {
+            font-size: var(--fz-xs);
+            line-height: 20px;
+        }
+    }
+
+    .button[type='submit'] {
+        font-weight: bold;
+        font-size: var(--fz-md);
+        line-height: 24px;
+
+        text-align: center;
+        letter-spacing: 0.0625em;
+
+        width: 352px;
+
+        @include tablet {
+            width: 311px;
+        }
+    }
+}
+
+.wic-label {
+    font-weight: normal;
+    font-size: var(--fz-xs);
+    line-height: 20px;
+
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+.wic-input {
+    border: 1px solid var(--background-tertiary);
+
+    font-weight: normal;
+    font-size: var(--fz-md);
+    line-height: 24px;
+    color: var(--text-primary);
+
+
+    width: 352px;
+    height: 40px;
+
+    @include tablet {
+        width: 311px;
+    }
+
+    &::placeholder {
+        color: var(--background-tertiary);
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+}
+
+.wic-textarea {
+    height: 152px;
+    resize: none;
+
+    padding: 8px 17px;
+}
+
+.wic-checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    font-weight: normal;
+    font-size: var(--fz-md);
+    line-height: 24px;
+
+    color: var(--text-primary);
+
+    padding-left: 24px !important;
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+
+        height: 0;
+        width: 0;
+
+        &:checked {
+            ~.wic-checkbox__checkmark {
+                background-color: var(--primary);
+                border: 0;
+
+                &::after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        transform: translateY(-50%);
+
+        width: 16px;
+        height: 16px;
+
+        border: 1px solid var(--background-tertiary);
+
+        &::after {
+            content: url("../../images/icons/checkmark.svg");
+            position: absolute;
+            display: none;
+
+            top: -1px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            // border: solid white;
+            // border-width: 0 1px 1px 0;
+            // -webkit-transform: rotate(45deg);
+            // -ms-transform: rotate(45deg);
+            // transform: rotate(45deg);
+        }
+    }
+}
